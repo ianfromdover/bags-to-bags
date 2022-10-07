@@ -1,0 +1,4 @@
+function PersonalBag() constructor
+{
+	// yes
+}

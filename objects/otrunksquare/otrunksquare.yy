@@ -1,19 +1,18 @@
 {
-  "name": "oTrunkSquare",
   "spriteId": {
     "name": "sTrunkSquare",
     "path": "sprites/sTrunkSquare/sTrunkSquare.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "aTrunkGrid",
     "path": "objects/aTrunkGrid/aTrunkGrid.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -25,7 +24,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":2,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":3,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,6 +35,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
+  "name": "oTrunkSquare",
   "tags": [],
   "resourceType": "GMObject",
 }
