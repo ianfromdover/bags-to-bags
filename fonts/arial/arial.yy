@@ -1,8 +1,4 @@
 {
-  "name": "Arial",
-  "includeTTF": false,
-  "size": 16.0,
-  "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -10,12 +6,15 @@
   "applyKerning": 0,
   "fontName": "Arial",
   "styleName": "Regular",
+  "size": 16.0,
   "bold": false,
   "italic": false,
   "charset": 0,
   "AntiAlias": 1,
   "first": 0,
   "last": 0,
+  "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
+  "includeTTF": false,
   "TTFName": "",
   "textureGroupId": {
     "name": "Default",
@@ -223,6 +222,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
+  "name": "Arial",
   "tags": [],
   "resourceType": "GMFont",
 }
