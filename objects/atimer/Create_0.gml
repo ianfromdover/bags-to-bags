@@ -1,5 +1,3 @@
 /// @description Initialise Timer fn. Default is 30s.
 
-duration = 30;
-displayedTime = duration;
-currTime = duration;
+this = new Timer(id, 30, noone);

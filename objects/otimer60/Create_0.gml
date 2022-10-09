@@ -1,5 +1,3 @@
 /// @description Init 60s Timer
 
-duration = 60;
-displayedTime = duration;
-currTime = duration;
+this = new Timer(id, 60, noone);

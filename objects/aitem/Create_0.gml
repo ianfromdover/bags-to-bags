@@ -1,2 +1,3 @@
 /// @description Init Item
-this = new Item(id);
+// this, is it stealable? squares coords relative to center
+this = new Item(id, false, []);

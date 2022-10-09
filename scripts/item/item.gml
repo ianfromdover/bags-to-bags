@@ -1,22 +1,20 @@
-function Item(_id) constructor
-// function Item(_id, s, occArr) constructor // parent of a bag
-// use the next one when trying to calc snapping.
-// the indiv offsets and len calc is done in each create child in editor
+function Item(_id, _isStealable, _occArr) constructor
 {
 	// -----------------------
 	// ----- attributes  -----
 	// -----------------------
 
     this = _id;
-    isStealable = false; // true for valuables and illegals
 
     // for docking
-	size = 0; // set these in the constructor
-	occupiedSquares = [];
-    canDock = false;
-    prevGridPosOfOrigin = Vector2(); // grid coords
-    allAvail = true; // note: can't be accessed in the with-block
-    // origin is at (25, 25) px for each sprite
+    isStealable = _isStealable; // implement chk to collide with personal bag
+    occupiedSquares = _occArr;
+    // for pieces with an even no. of sides, it is at btm left corner
+	size = array_length(_occArr);
+
+    prevGridPosOfOrigin = noone;
+    nearestSlot = noone;
+    allAvail = true;
 
     // for dragging
 	isBeingDragged = false;
@@ -32,82 +30,124 @@ function Item(_id) constructor
     {
         Undock();
         isBeingDragged = true;
+        var temp_c_offst_x;
+        var temp_c_offst_y;
 
         // save item's offset
         with (this)
         {
-            cursorOffsetX = x - cursor_x;
-            cursorOffsetY = y - cursor_y;
+            temp_c_offst_x = x - cursor_x;
+            temp_c_offst_y = y - cursor_y;
         }
+
+        cursorOffsetX = temp_c_offst_x;
+        cursorOffsetY = temp_c_offst_y;
     }
 
 	static Undock = function() // with Trunk
 	{
-		// for each occupiedSquare
-        for ( i = 0; i < size; i++)
+        var _size = size;
+        var _occupiedSquares = occupiedSquares;
+        if (nearestSlot == noone) exit;
+
+        with (nearestSlot)
         {
-			// set item to noone for each slot
-            // global item being dragged = this
+            for (var i = 0; i < _size; i++)
+            {
+                var curr_coords = coords.sum(_occupiedSquares[i]);
+                parentGrid.UndockSlots(curr_coords);
+            }
         }
 	}
 	
     static Follow = function(cursor_x, cursor_y)
     {
-        if (!isBeingDragged) exit; // this case only happens in Step event
+        if (!isBeingDragged) exit; // only triggered in Step event
 
-        HoverCheck(); // talks with the trunk in the room
+        var new_item_x = cursor_x + cursorOffsetX;
+        var new_item_y = cursor_y + cursorOffsetY;
+        HoverCheck(new_item_x, new_item_y); // talks with the slot it hovers over
 
         with (this)
         {
             // make item follow cursor
-            x = cursor_x + cursorOffsetX;
-            y = cursor_y + cursorOffsetY;
+            x = new_item_x;
+            y = new_item_y;
         }
-
     }
 
     // chks if piece's placement on grid will be free
-    // this should be heavily optimised. delete all structs lists and vars
+    // TODO: heavily optimise. delete all structs lists and vars
     static HoverCheck = function(_x, _y)
     {
         // 1. determine nearest squares to middle of hovering piece
         var _nearestList = new List();
-        // _x, _y should be the curr position of the center of the item
-        numHits = instance_place_list(_x, _y, oSlot, _nearestList, true); // sort by dist
+        var tempNearestSlot; // can't be accessed in the with-block unless is a var.
+        var tempAllAvail = true;
+        var _size = size;
+        var _occupiedSquares = occupiedSquares;
 
-        allAvail = true; // note: can't be accessed in the with-block
-        // may wanna move the check to another script or the param into the constructor
 
-        // 2. check each anticipated slot if is free (perhaps this should be its own fn) but then again level of abstraction should be constant.
-            // i. should have helper function that takes in list of posns and for each slot activates its API
-        with (_nearestList.getValue(0)) // for nearest hit,
+        // find nearest slot to center of item
+		// use the collision mask of the instance that runs the code for the check.
+		with (this)
+		{
+			instance_place_list(_x, _y, oSlot, _nearestList, true); // sort by dist
+			tempNearestSlot = _nearestList.getValue(0);
+		}
+
+        // 2. check each anticipated slot if is free
+        if (is_undefined(tempNearestSlot))
         {
-            // imagine the piece placed centrally on that
-                // how to determine the center?
+            // for ending drag
+            allAvail = false;
+            nearestSlot = noone;
+
+            // clean up
+            _nearestList = _nearestList.destroy();
+            exit;
+        }
+
+        with (tempNearestSlot.this)
+        {
+            // can we use isBeingDragged here? to make it more optimised?
+            // reset previous squares' colour first
+            parentGrid.SetAllColDef();
+
             // try to fit the square segments into anticipated position
-                // checks if 
-                    // piece is dropped over slots which are not free
-                    // piece is dropped outside the grid (aka grid index > max grid idx)
-            // for each square attempted, CheckOccupied()
-            // allAvail = AND the bools of all squares.  should this be executed by trunk?
+            for (var i = 0; i < _size; i++) // make into helper fn. list of grid posns, for each slot, activate api
+            {
+                var curr_coords = coords.sum(_occupiedSquares[i]); // assumes occupiedSquares (0, 0) is at center of item
+                // check is piece dropped outside the grid?
+                if (parentGrid.CoordIsOutsideGrid(curr_coords)
+                // check is piece dropped over a slot which is occupied?
+                 || parentGrid.CoordIsOccupied(curr_coords))
+                {
+                    tempAllAvail = false;
+                    break;
+                }
+            }
+
+            if (tempAllAvail == false) exit;
+
+            // 3. set colour
+            for (var i = 0; i < _size; i++)
+            {
+                var curr_coords = coords.sum(_occupiedSquares[i]);
+                if (tempAllAvail)
+                {
+                    parentGrid.SetCoordColAvail(curr_coords);
+                }
+                else
+                {
+                    parentGrid.SetCoordColBlocked(curr_coords);
+                }
+            }
         }
 
-        // 3. set colour
-		/*
-        if (allAvail)
-        {
-            for (each slot) with (that slot) SetColAvail(); // the cols
-        }
-        else
-        {
-            for (each slot) with (that slot) SetColBlocked();
-        }
-		*/
-        // when will the slot set itself to be default? idw slots to check every frame.
-        // it should set default once there isnt a piece hovering. how does piece do that? piece is unable to tell when it exits tho.
-        // can we use isBeingDragged here?
-        // so slot is start of frame set default, before frame is drawn it sets to colour if got piece.
-        // else, set col first, then set default at end of frame that we dont see it
+        // for ending drag
+        allAvail = tempAllAvail;
+        nearestSlot = tempNearestSlot;
 
         // clean up
         _nearestList = _nearestList.destroy();
@@ -117,17 +157,44 @@ function Item(_id) constructor
     static OnDragEnd = function()
     {
         isBeingDragged = false;
+        var _size = size;
+        var _occupiedSquares = occupiedSquares;
+
         if (allAvail)
         {
-            // prev pos = this new pos
-            // for (each slot) with (that slot) Dock(this); // each slot in occupiedSquares
+            var slot_x;
+            var slot_y;
+
+            with (nearestSlot)
+            {
+                slot_x = x;
+                slot_y = y;
+
+                prevGridPosOfOrigin = new Vector2(x, y);
+                for (var i = 0; i < _size; i++)
+                {
+                    var curr_coords = coords.sum(_occupiedSquares[i]);
+                    parentGrid.DockSlots(curr_coords, this);
+                }
+            }
+
+            with (this) // move the item to the slot
+            {
+                // x = slot_x; // causes error cuz slot = null.
+                // y = slot_y;
+            }
         }
         else 
         {
-            // dock the piece back to its original place
-            // piece pos = this.prevGridPosOfOrigin
-            // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. this is possible with the nearest list. but it needs to be outside that function
-            // item being dragged = null
+            if (prevGridPosOfOrigin == noone) exit;
+
+            with (this) // move the item back
+            {
+                x = prevGridPosOfOrigin.x;
+                y = prevGridPosOfOrigin.y;
+            }
+            // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. 
+            // this is possible with the nearest list. but it needs to be outside that function
         }
     }
 }

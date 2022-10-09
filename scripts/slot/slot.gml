@@ -1,15 +1,24 @@
-function Slot(_id, _a, _b) constructor
+function Slot(_id, _parentGrid, _a, _b) constructor
 {
     // attributes
     this = _id;
-    a = _a; // coords in the grid, with (0, 0) at btm left corner
-    b = _b;
+    parentGrid = _parentGrid;
+    coords = new Vector2(_a, _b); // coords in the grid, with (0, 0) at btm left corner
     dockedItem = noone; // the parent object of the squares that it occupies
     isOccupied = false;
     with(this)
     {
         image_speed = 0;
         image_index = 0; // 0 = nothing hovering, 1 = available, 2 = occupied
+    }
+
+	// --------------------------
+	// ----- public methods -----
+	// --------------------------
+
+    static GetCoords = function()
+    {
+        return coords;
     }
 
     static CheckOccupied = function()
@@ -28,10 +37,6 @@ function Slot(_id, _a, _b) constructor
         dockedItem = noone;
         isOccupied = false;
     }
-
-	// --------------------------
-	// ----- public methods -----
-	// --------------------------
 
     static SetColAvail = function()
     {
