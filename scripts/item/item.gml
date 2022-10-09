@@ -93,6 +93,7 @@ function Item(_id) constructor
         }
 
         // 3. set colour
+		/*
         if (allAvail)
         {
             for (each slot) with (that slot) SetColAvail(); // the cols
@@ -101,6 +102,7 @@ function Item(_id) constructor
         {
             for (each slot) with (that slot) SetColBlocked();
         }
+		*/
         // when will the slot set itself to be default? idw slots to check every frame.
         // it should set default once there isnt a piece hovering. how does piece do that? piece is unable to tell when it exits tho.
         // can we use isBeingDragged here?
@@ -118,7 +120,7 @@ function Item(_id) constructor
         if (allAvail)
         {
             // prev pos = this new pos
-            for (each slot) with (that slot) Dock(this); // each slot in occupiedSquares
+            // for (each slot) with (that slot) Dock(this); // each slot in occupiedSquares
         }
         else 
         {
