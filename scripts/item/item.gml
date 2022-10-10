@@ -108,22 +108,22 @@ function Item(_id, _isStealable, _occArr) constructor
             exit;
         }
 
-        with (tempNearestSlot)
+        with (tempNearestSlot.this)
         {
-            var t = this_slot_logic; // the this is referencing wrongly. should put this name into the slot
+            // var t = this_slot_logic; // the this is referencing wrongly. should put this name into the slot
             
 			// can we use isBeingDragged here? to make it more optimised?
             // reset previous squares' colour first
-            t.parentGrid.SetAllColAvail(); // TODO: disable this. the colours are not changing at all
+            // parentGrid.SetAllColDef(); // TODO: disable this. the colours are not changing at all
 
             // try to fit the square segments into anticipated position
             for (var i = 0; i < _size; i++) // make into helper fn. list of grid posns, for each slot, activate api
             {
                 var curr_coords = coords.sum(_occupiedSquares[i]); // assumes occupiedSquares (0, 0) is at center of item
                 // check is piece dropped outside the grid?
-                if (t.parentGrid.CoordIsOutsideGrid(curr_coords)
+                if (parentGrid.CoordIsOutsideGrid(curr_coords)
                 // check is piece dropped over a slot which is occupied?
-                 || t.parentGrid.CoordIsOccupied(curr_coords))
+                 || parentGrid.CoordIsOccupied(curr_coords))
                 {
                     tempAllAvail = false;
                     break;
@@ -138,11 +138,11 @@ function Item(_id, _isStealable, _occArr) constructor
                 var curr_coords = coords.sum(_occupiedSquares[i]);
                 if (tempAllAvail)
                 {
-                    t.parentGrid.SetCoordColAvail(curr_coords);
+                    parentGrid.SetCoordColAvail(curr_coords);
                 }
                 else
                 {
-                    t.parentGrid.SetCoordColBlocked(curr_coords);
+                    parentGrid.SetCoordColBlocked(curr_coords);
                 }
             }
         }
