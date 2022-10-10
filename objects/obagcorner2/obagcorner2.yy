@@ -34,7 +34,7 @@
     "path": "folders/Objects/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBagVLarge",
+  "name": "oBagCorner2",
   "tags": [],
   "resourceType": "GMObject",
 }

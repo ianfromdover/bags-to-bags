@@ -34,7 +34,7 @@
     "path": "folders/Objects/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBagSquare",
+  "name": "oValCross",
   "tags": [],
   "resourceType": "GMObject",
 }
