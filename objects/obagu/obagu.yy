@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oBagU",
   "spriteId": {
-    "name": "sValSquare",
-    "path": "sprites/sValSquare/sValSquare.yy",
+    "name": "sBagU",
+    "path": "sprites/sBagU/sBagU.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "Items",
     "path": "folders/Objects/Items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oBagU",
-  "tags": [],
-  "resourceType": "GMObject",
 }
