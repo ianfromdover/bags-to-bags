@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sValSquare",
-    "path": "sprites/sValSquare/sValSquare.yy",
+    "name": "sBagI",
+    "path": "sprites/sBagI/sBagI.yy",
   },
   "solid": false,
   "visible": true,
