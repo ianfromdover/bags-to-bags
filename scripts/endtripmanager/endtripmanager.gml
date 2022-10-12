@@ -9,3 +9,4 @@ function EndTripManager(_rm) constructor
 		// okai
 	}
 }
+
