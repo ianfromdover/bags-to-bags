@@ -18,7 +18,7 @@ function SlotGrid(_id, _x, _y, _width, _height, _slotLengthPx) constructor
         for (var j = 0; j < height; j++)
         {
             // create slot and instantiate my code logic
-            var inst = instance_create_layer(slPosX, slPosY, "Instances", oSlot); // yes
+            var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot); // yes
             var slotLogic = new Slot(inst, self, i, j);
             with (inst)
             {

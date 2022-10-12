@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "oBagSnake",
   "spriteId": {
     "name": "sBagSnake",
     "path": "sprites/sBagSnake/sBagSnake.yy",
@@ -28,7 +25,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -36,4 +33,8 @@
     "name": "Items",
     "path": "folders/Objects/Items.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "oBagSnake",
+  "tags": [],
+  "resourceType": "GMObject",
 }

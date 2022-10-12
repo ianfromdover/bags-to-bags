@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBagTLong",
-    "path": "sprites/sBagTLong/sBagTLong.yy",
+    "name": "sBagW",
+    "path": "sprites/sBagW/sBagW.yy",
   },
   "solid": false,
   "visible": true,
@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "aItem",
-    "path": "objects/aItem/aItem.yy",
+    "name": "aUIButton",
+    "path": "objects/aUIButton/aUIButton.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -30,11 +30,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBagTLong",
+  "name": "oBtnDebugTripPack",
   "tags": [],
   "resourceType": "GMObject",
 }
