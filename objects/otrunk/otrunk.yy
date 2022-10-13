@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sTrunk",
+    "path": "sprites/sTrunk/sTrunk.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
