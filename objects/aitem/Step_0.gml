@@ -1,2 +1,2 @@
-/// @description follow the mouse
-this.Follow(mouse_x, mouse_y);
+/// @description Follow
+Follow(mouse_x, mouse_y);

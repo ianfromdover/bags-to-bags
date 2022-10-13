@@ -1,6 +1,6 @@
-function EndTripManager(_rm) constructor
+function EndTripManager() constructor
 {
-	curr_room = _rm;
+    // room is current room variable
 	// global.cash;
 	// global.dayTimeLeft;
 	
@@ -9,3 +9,4 @@ function EndTripManager(_rm) constructor
 		// okai
 	}
 }
+

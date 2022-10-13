@@ -445,7 +445,7 @@ function List() constructor
 			}
 			
 			// @argument			{any} value...
-			// @description			Add one or more values to this List.
+			// @description			Add one or more values to the end of this List.
 			static add = function()
 			{
 				if ((is_real(ID)) and (ds_exists(ID, ds_type_list)))

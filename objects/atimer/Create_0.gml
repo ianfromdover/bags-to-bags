@@ -1,3 +1,3 @@
 /// @description Initialise Timer fn. Default is 30s.
 
-this = new Timer(id, 30, noone);
+thisLogic = new Timer(id, global.easyTime, TripManager.OnSubmit);

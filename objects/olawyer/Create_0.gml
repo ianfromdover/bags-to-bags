@@ -1,2 +1,2 @@
-/// @description Overwrite fn in child
-this = new UiButton(id, noone);
+/// @description Launches hard rooms
+this = new UiButtonOneArg(LaunchRandomRoom, "hard");
