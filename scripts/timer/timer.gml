@@ -1,6 +1,6 @@
 function Timer(_id, _duration, _fn) constructor
 {
-    this = _id;
+    thisObj = _id;
     fn = _fn;
     displayedTime = _duration;
     currTime = _duration;

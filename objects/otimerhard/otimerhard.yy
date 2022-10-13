@@ -31,7 +31,7 @@
     "path": "folders/Objects/Trip.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTimer60",
+  "name": "oTimerHard",
   "tags": [],
   "resourceType": "GMObject",
 }

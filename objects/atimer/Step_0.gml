@@ -1,14 +1,14 @@
 /// @description Countdown each second
 
-if (this.currTime < 0) // time has run out
+if (thisLogic.currTime < 0) // time has run out
 {
-	this.currTime = 0;
-	this.displayedTime = 0;
+	thisLogic.currTime = 0;
+	thisLogic.displayedTime = 0;
 	
 	// trigger functions here
 }
 else // subtract the time between frames
 {
-	this.currTime -= (delta_time / 1000000) // convert microseconds into seconds
-	this.displayedTime = ceil(this.currTime); // round up to nearest int
+	thisLogic.currTime -= (delta_time / 1000000) // convert microseconds into seconds
+	thisLogic.displayedTime = ceil(thisLogic.currTime); // round up to nearest int
 }

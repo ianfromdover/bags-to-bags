@@ -1,21 +1,38 @@
 /// Manages the room where the player is sorting into the trunk, 
 /// and counts the score when the player finishes.
 /// Launches the End Trip room.
-function TripManager(_diff, _time) constructor
+function TripManager() constructor
 {
-	diff = _diff;
-	// timer = Timer(_time); // object? how to pass the curr time into the submit function?
-    time_remaining = 30; // float
+    // difficulty = global difficulty
+    // time = global time
+    timerPosX = 64; // pixels
+    timerPosY = 64; // pixels
+
+    // assign on difficulty setting
+    timerObj = 0; 
+    timerLogic = 0; // get the time remaining from this
 	
-	static Init = function()
+	switch ("easy") // TODO: change to room's difficulty
 	{
-		// okai
-	}
+		case "easy":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerEasy);
+			break;
+		case "mid":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerMid);
+			break;
+		case "hard":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerHard);
+			break;
+        default:
+			Log("Error: [TripManager: Init] invalid difficulty selected");
+	};
+    timerLogic = timerObj.thisLogic;
 
 	static OnSubmit = function() // link this to btn using TripManager.OnSubmit
 	{
+        Log("ONSUBMIT WORKS");
         // global.cash += CalcMoneyFrmRemainingTime(timer, diff);
-        global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(diff) + time_remaining;
+        // global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(diff) + time_remaining;
         // store the money and stats in global variables
         // launch the end trip room with those recents.
 	}
