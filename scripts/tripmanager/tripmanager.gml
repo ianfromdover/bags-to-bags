@@ -46,10 +46,10 @@ function GetLevelMaxTime(_diff)
 			return global.easyTime;
 			break;
 		case "mid":
-			return global.easyTime;
+			return global.midTime;
 			break;
 		case "hard":
-			return global.easyTime;
+			return global.hardTime;
 			break;
         default:
 			Log("Error: [TripManager: CalcMoneyFrmRemainingTime] invalid difficulty selected");

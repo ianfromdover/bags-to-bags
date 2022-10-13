@@ -57,7 +57,8 @@ function Follow(cursor_x, cursor_y)
 
     x = cursor_x + cursorOffsetX;
     y = cursor_y + cursorOffsetY;
-    HoverCheck(x, y); // ask the slot to change col depending on availability
+    HoverCheck(x, y); // ask the slot to change col depending on availabilit
+	// maybe move line to collision events
 }
 
 // chks if piece's placement on grid will be free
@@ -72,8 +73,8 @@ function HoverCheck(_x, _y)
 
     // find nearest slot to center of item
     // use the item's collision mask to check
-    instance_place_list(_x, _y, oSlot, nearestList, true); // sort by dist
-    nearestSlot = nearestList.getValue(0);
+    instance_place_list(_x, _y, oSlot, nearestList, true); // sort by dist, TODO: see whats going wrong here
+    nearestSlot = nearestList.getValue(0); // returns null when overlapping
 
     // 2. check each anticipated slot if is free
 

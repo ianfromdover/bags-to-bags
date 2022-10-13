@@ -21,6 +21,7 @@
     {"id":{"name":"sBagCorner2","path":"sprites/sBagCorner2/sBagCorner2.yy",},"order":1,},
     {"id":{"name":"oEndTripMoney","path":"objects/oEndTripMoney/oEndTripMoney.yy",},"order":11,},
     {"id":{"name":"oIllegAK47","path":"objects/oIllegAK47/oIllegAK47.yy",},"order":6,},
+    {"id":{"name":"oTripManager","path":"objects/oTripManager/oTripManager.yy",},"order":8,},
     {"id":{"name":"rEasy3","path":"rooms/rEasy3/rEasy3.yy",},"order":7,},
     {"id":{"name":"sBtnHelp","path":"sprites/sBtnHelp/sBtnHelp.yy",},"order":2,},
     {"id":{"name":"rMid2","path":"rooms/rMid2/rMid2.yy",},"order":22,},
