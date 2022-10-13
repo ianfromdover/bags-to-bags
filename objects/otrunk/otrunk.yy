@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTrunk",
-    "path": "sprites/sTrunk/sTrunk.yy",
+    "name": "sTrunkDebug",
+    "path": "sprites/sTrunkDebug/sTrunkDebug.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

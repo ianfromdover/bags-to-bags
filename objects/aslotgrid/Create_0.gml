@@ -1,6 +1,6 @@
 /// @description SlotGrid. Set trunk grid width and height, spawns slots
 
-width = 7;
+width = 7; // to edit, override in Room Start Event, then call the Init();
 height = 5;
 slotPxLen = 50;
 
@@ -8,35 +8,37 @@ slotPxLen = 50;
 slots = [];
 itemsContained = new List();
 
-// pos of temp slot being initialised
-slPosX = (slotPxLen / 2) + x; // first slot at (0, 0) btm left of grid
-slPosY = (slotPxLen / 2) + y;
-
-// create slots
-for (var i = 0; i < width; i++)
+function Init() // create slots
 {
-    slots[i] = array_create(height, noone);
+    // pos of temp slot being initialised
+    slPosX = (slotPxLen / 2) + x; // first slot at (0, 0) btm left of grid
+    slPosY = (slotPxLen / 2) + y;
 
-    for (var j = 0; j < height; j++)
+    for (var i = 0; i < width; i++)
     {
-        // create slot and instantiate my code logic
-        var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot); // yes
-        with (inst)
+        slots[i] = array_create(height, noone);
+
+        for (var j = 0; j < height; j++)
         {
-            parentGrid = self;
-            coords = new Vector2(i, j); // (0, 0) btm left corner
+            // create slot and instantiate my code logic
+            var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot); // yes
+            with (inst)
+            {
+                parentGrid = self;
+                coords = new Vector2(i, j); // (0, 0) btm left corner
+            }
+
+            // put into array
+            slots[i][j] = inst;
+
+            // spawn the next slot above
+            slPosY += slotPxLen;
         }
 
-        // put into array
-        slots[i][j] = inst;
-
-        // spawn the next slot above
-        slPosY += slotPxLen;
+        // reset Y pos to base height and move right 1 slot
+        slPosY = slotPxLen / 2 + y;
+        slPosX += slotPxLen;
     }
-
-    // reset Y pos to base height and move right 1 slot
-    slPosY = slotPxLen / 2 + y;
-    slPosX += slotPxLen;
 }
 
 // --------------------------

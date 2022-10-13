@@ -1,18 +1,12 @@
-/// @description Init Item
-// TODO: paste over each child item
+/// @description
+// add unique item properties using the Room Start event instead.
 
 // -----------------------
 // ----- attributes  -----
 // -----------------------
 isStealable = false; // implement chk to collide with personal bag
 
-// squares the item has, relative to the center
-// for pieces with an even no. of sides, it is at btm left corner
-a = new Vector2(0, 0);
-b = new Vector2(1, 0);
-
-// add the coords above to the array
-occupiedSquares = [a, b];
+occupiedSquares = [];
 
 size = array_length(occupiedSquares);
 
@@ -22,7 +16,7 @@ size = array_length(occupiedSquares);
 
 prevPxPosOfOrigin = noone; // type: Vector2
 nearestSlot = noone; // type: oSlot, slot that is nearest to the 'center' of the piece. this slot is the anchor of reference on the item when it is on the grid.
-allAvail = true;
+allAvail = false;
 isBeingDragged = false;
 cursorOffsetX = 0;
 cursorOffsetY = 0;
@@ -63,7 +57,7 @@ function Follow(cursor_x, cursor_y)
 
     x = cursor_x + cursorOffsetX;
     y = cursor_y + cursorOffsetY;
-    HoverCheck(new_item_x, new_item_y); // ask the slot to change col depending on availability
+    HoverCheck(x, y); // ask the slot to change col depending on availability
 }
 
 // chks if piece's placement on grid will be free
