@@ -1,3 +1,3 @@
 endFn = global.tripManager.OnTripEnd;
-displayedTime = global.easyTime;
+displayedTime = global.hardTime;
 Init();

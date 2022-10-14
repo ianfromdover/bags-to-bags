@@ -21,7 +21,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -29,7 +31,7 @@
     "path": "folders/Objects/Trip.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTimerEasy",
+  "name": "oTimerDay",
   "tags": [],
   "resourceType": "GMObject",
 }

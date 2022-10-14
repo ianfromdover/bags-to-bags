@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "BodyText",
+    "path": "folders/Objects/UI/BodyText.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEndTripMoney",

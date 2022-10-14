@@ -1,0 +1,1 @@
+this = new UiButton(global.tripManager.OnTripEnd);

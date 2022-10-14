@@ -5,10 +5,7 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "aTimer",
-    "path": "objects/aTimer/aTimer.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,15 +18,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Trip",
-    "path": "folders/Objects/Trip.yy",
+    "name": "BodyText",
+    "path": "folders/Objects/UI/BodyText.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTimerEasy",
+  "name": "oEndDayMoney",
   "tags": [],
   "resourceType": "GMObject",
 }

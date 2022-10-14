@@ -1,9 +1,10 @@
 /// @description Initialise Timer fn.
 // can use globals for this to talk with the trip manager.
 
-endFn = global.tripManager.OnSubmit;
-arg = EndTripScene;
+endFn = 0; // assigned in room start
 displayedTime = global.easyTime;
+timeIsRunning = true;
+
 
 function Init()
 {
@@ -19,5 +20,10 @@ function Init()
 
 function OnEnd()
 {
-    endFn(arg);
+    endFn();
+}
+
+function StopTimer()
+{
+	timeIsRunning = false;
 }
