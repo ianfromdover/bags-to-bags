@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sValCross",
-    "path": "sprites/sValCross/sValCross.yy",
+    "name": "sValCrossShiny",
+    "path": "sprites/sValCrossShiny/sValCrossShiny.yy",
   },
   "solid": false,
   "visible": true,

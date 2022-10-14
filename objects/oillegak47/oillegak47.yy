@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sIllegAK47",
-    "path": "sprites/sIllegAK47/sIllegAK47.yy",
+    "name": "sIllegAK47Shiny",
+    "path": "sprites/sIllegAK47Shiny/sIllegAK47Shiny.yy",
   },
   "solid": false,
   "visible": true,
