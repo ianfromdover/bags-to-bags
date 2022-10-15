@@ -2,16 +2,21 @@
 
 if (timeIsRunning)
 {
-if (currTime < 0) // time has run out
-{
-	currTime = 0;
-	displayedTime = 0;
+	if (currTime < 0) // time has run out
+	{
+		currTime = 0;
+		displayedTime = 0;
 	
-	OnEnd();
+		OnEnd();
+	}
+	else // subtract the time between frames
+	{
+		currTime -= (delta_time / 1000000) // convert microseconds into seconds
+		displayedTime = ceil(currTime); // round up to nearest int
+	}
 }
-else // subtract the time between frames
+
+if (displayedTime == 15)
 {
-	currTime -= (delta_time / 1000000) // convert microseconds into seconds
-	displayedTime = ceil(currTime); // round up to nearest int
-}
+	isLastFewSeconds = true;
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBtnSubmit",
-    "path": "sprites/sBtnSubmit/sBtnSubmit.yy",
+    "name": "sTaxiSubmit",
+    "path": "sprites/sTaxiSubmit/sTaxiSubmit.yy",
   },
   "solid": false,
   "visible": true,

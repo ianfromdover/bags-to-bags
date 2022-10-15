@@ -4,7 +4,7 @@
 endFn = 0; // assigned in room start
 displayedTime = global.easyTime;
 timeIsRunning = true;
-
+isLastFewSeconds = false;
 
 function Init()
 {

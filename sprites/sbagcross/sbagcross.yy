@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 100,
+  "bbox_right": 154,
   "bbox_top": 0,
-  "bbox_bottom": 100,
+  "bbox_bottom": 154,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 101,
-  "height": 101,
+  "width": 155,
+  "height": 155,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"LayerId":{"name":"792efefe-ff72-4ee1-9801-c00f5038cbc4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bd702565-6907-4744-9d25-9415deabdb88","path":"sprites/sBagCross/sBagCross.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bd702565-6907-4744-9d25-9415deabdb88","path":"sprites/sBagCross/sBagCross.yy",},"LayerId":{"name":"bb297d1e-124b-44aa-9564-5bd402d38491","path":"sprites/sBagCross/sBagCross.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBagCross","path":"sprites/sBagCross/sBagCross.yy",},"resourceVersion":"1.0","name":"bd702565-6907-4744-9d25-9415deabdb88","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},
+    "spriteId": {"name":"sBagCross","path":"sprites/sBagCross/sBagCross.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3ef26385-1cc6-4805-81cf-7cc1381ae0da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aa9f3323-ad4c-4601-be7c-a426efb2ff2f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd702565-6907-4744-9d25-9415deabdb88","path":"sprites/sBagCross/sBagCross.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},
+    "parent": {"name":"sBagCross","path":"sprites/sBagCross/sBagCross.yy",},
     "resourceVersion": "1.4",
-    "name": "sValSquareShiny",
+    "name": "sBagCross",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"792efefe-ff72-4ee1-9801-c00f5038cbc4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bb297d1e-124b-44aa-9564-5bd402d38491","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sValSquareShiny",
+  "name": "sBagCross",
   "tags": [],
   "resourceType": "GMSprite",
 }

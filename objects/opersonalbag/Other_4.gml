@@ -1,5 +1,5 @@
 /// @description Unique
-width = 3;
+width = 5;
 height = 9;
 slotPxLen = 50;
 

@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 100,
+  "bbox_right": 200,
   "bbox_top": 0,
-  "bbox_bottom": 100,
+  "bbox_bottom": 102,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 101,
-  "height": 101,
+  "width": 201,
+  "height": 103,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"LayerId":{"name":"792efefe-ff72-4ee1-9801-c00f5038cbc4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7f060345-91aa-41bc-a03f-6214505a0872","path":"sprites/sBagTwig/sBagTwig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7f060345-91aa-41bc-a03f-6214505a0872","path":"sprites/sBagTwig/sBagTwig.yy",},"LayerId":{"name":"587ed5a0-21df-433d-8344-f852f3cb6e71","path":"sprites/sBagTwig/sBagTwig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBagTwig","path":"sprites/sBagTwig/sBagTwig.yy",},"resourceVersion":"1.0","name":"7f060345-91aa-41bc-a03f-6214505a0872","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},
+    "spriteId": {"name":"sBagTwig","path":"sprites/sBagTwig/sBagTwig.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3ef26385-1cc6-4805-81cf-7cc1381ae0da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"438c1b71-a6fa-4cf3-afec-e6179d3753c4","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d170128a-bd48-4267-8a22-08c1b6a8be55","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f060345-91aa-41bc-a03f-6214505a0872","path":"sprites/sBagTwig/sBagTwig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sValSquareShiny","path":"sprites/sValSquareShiny/sValSquareShiny.yy",},
+    "parent": {"name":"sBagTwig","path":"sprites/sBagTwig/sBagTwig.yy",},
     "resourceVersion": "1.4",
-    "name": "sValSquareShiny",
+    "name": "sBagTwig",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"792efefe-ff72-4ee1-9801-c00f5038cbc4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"587ed5a0-21df-433d-8344-f852f3cb6e71","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sValSquareShiny",
+  "name": "sBagTwig",
   "tags": [],
   "resourceType": "GMSprite",
 }

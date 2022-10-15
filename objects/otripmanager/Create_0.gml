@@ -1,6 +1,6 @@
 difficulty = "easy";
-timerPosX = 64; // pixels
-timerPosY = 64; // pixels
+timerPosX = 75; // pixels
+timerPosY = 60; // pixels
 
 // global.activeTimer; // get the remaining time from this. it will call onSubmit.
 global.tripManager = id;
