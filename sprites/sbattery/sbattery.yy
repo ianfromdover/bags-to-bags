@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 132,
   "bbox_top": 0,
-  "bbox_bottom": 163,
+  "bbox_bottom": 153,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 133,
-  "height": 164,
+  "height": 154,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"LayerId":{"name":"192312d7-4649-4d80-a7d0-c20a122ffb05","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","name":"c9b8118c-1768-4d60-b76a-d449836d0291","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"80b87329-2529-4448-920c-2076dc1c6376","path":"sprites/sBattery/sBattery.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"80b87329-2529-4448-920c-2076dc1c6376","path":"sprites/sBattery/sBattery.yy",},"LayerId":{"name":"f8a29392-b96f-46c6-b220-46a9ae9c79eb","path":"sprites/sBattery/sBattery.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery","path":"sprites/sBattery/sBattery.yy",},"resourceVersion":"1.0","name":"80b87329-2529-4448-920c-2076dc1c6376","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},
+    "spriteId": {"name":"sBattery","path":"sprites/sBattery/sBattery.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"72fd5ab3-5bd4-4d0e-8adf-2d7a03c26785","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"96840359-c014-46e8-9b23-3cdc8d179c52","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"80b87329-2529-4448-920c-2076dc1c6376","path":"sprites/sBattery/sBattery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},
+    "parent": {"name":"sBattery","path":"sprites/sBattery/sBattery.yy",},
     "resourceVersion": "1.4",
-    "name": "sCriminal",
+    "name": "sBattery",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"192312d7-4649-4d80-a7d0-c20a122ffb05","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f8a29392-b96f-46c6-b220-46a9ae9c79eb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Aliens.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sCriminal",
+  "name": "sBattery",
   "tags": [],
   "resourceType": "GMSprite",
 }

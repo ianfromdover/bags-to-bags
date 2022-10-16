@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 132,
+  "bbox_right": 228,
   "bbox_top": 0,
-  "bbox_bottom": 163,
+  "bbox_bottom": 238,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 133,
-  "height": 164,
+  "width": 229,
+  "height": 239,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"LayerId":{"name":"192312d7-4649-4d80-a7d0-c20a122ffb05","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","name":"c9b8118c-1768-4d60-b76a-d449836d0291","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"93209958-fb70-4cbe-90c6-40e8d8feb435","path":"sprites/sCriminalproto/sCriminalproto.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"93209958-fb70-4cbe-90c6-40e8d8feb435","path":"sprites/sCriminalproto/sCriminalproto.yy",},"LayerId":{"name":"c4c0ecbd-a60a-4ee8-bdf3-6e16829c8cbf","path":"sprites/sCriminalproto/sCriminalproto.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCriminalproto","path":"sprites/sCriminalproto/sCriminalproto.yy",},"resourceVersion":"1.0","name":"93209958-fb70-4cbe-90c6-40e8d8feb435","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},
+    "spriteId": {"name":"sCriminalproto","path":"sprites/sCriminalproto/sCriminalproto.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"72fd5ab3-5bd4-4d0e-8adf-2d7a03c26785","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c9b8118c-1768-4d60-b76a-d449836d0291","path":"sprites/sCriminal/sCriminal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eb5906fe-a7ff-4412-92ef-c6a5c0b01a82","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93209958-fb70-4cbe-90c6-40e8d8feb435","path":"sprites/sCriminalproto/sCriminalproto.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCriminal","path":"sprites/sCriminal/sCriminal.yy",},
+    "parent": {"name":"sCriminalproto","path":"sprites/sCriminalproto/sCriminalproto.yy",},
     "resourceVersion": "1.4",
-    "name": "sCriminal",
+    "name": "sCriminalproto",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"192312d7-4649-4d80-a7d0-c20a122ffb05","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c4c0ecbd-a60a-4ee8-bdf3-6e16829c8cbf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Aliens.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sCriminal",
+  "name": "sCriminalproto",
   "tags": [],
   "resourceType": "GMSprite",
 }
