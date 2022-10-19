@@ -15,15 +15,15 @@ line = "\n";
 // ----
 // total
 
-msg = "CASH   " + global.cash + line
+msg = "CASH   " + string(global.cash) + line
 	+ line
-	+ "TIPS   " + global.tEarned + line // bonus time money
-	+ "SALARY " + global.tEarned + line
+	// + "TIPS   " + string(global.tripTotal) + line // bonus time money
+	// + "SALARY " + string(global.tripTotal) + line
 	+ "FUEL  -100\n"
 	+ "FINE   0\n"
 	+ "BONUS  0 (catch criminal)\n"
 	+ "--------" + line
-	+ "CASH   " + global.cash + line
+	// + "CASH   " + global.cash + line
 	+ "TOTAL  -100"
 	+ "--------" + line;
 

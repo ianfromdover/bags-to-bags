@@ -22,11 +22,19 @@ global.cash = 0;		// int
 
 global.day = 1;           // int, [1, 2, 3]
 global.dayTimeLeft = 300; // float, secs
+global.dayTotal = 0;
 
-global.easyCompleted = 0;
+global.bonusFromEasy = 0;
+global.bonusFromMid = 0;
+global.bonusFromHard = 0;
+
+global.easyCompleted = 0; // no of trips
 global.midCompleted = 0;
 global.hardCompleted = 0;
 
+global.bagsCaughtStealing = 0;
+global.dayIncompleteBags = 0;
+global.aliensServed = 0;
 
 // --------------------
 // -- TRIP INSTANCES --
@@ -39,13 +47,18 @@ global.activeTrunk = noone;
 // -- TRIP TEMP VARS --
 // --------------------
 
-global.tripTimeLeft = 0;
-global.tEarned = 0; // refactor to earned
-global.aliensServed = 0;
+global.tripBase = 70;               // edited
+global.tripTimeLeft = 11;
+global.tripMultiplier = 1;
+global.tripBagsIncomplete = 1;
+global.tripBagsTaken = 1;
+global.tripTotal = 0;
 
 // ---------------
 // -- CONSTANTS --
 // ---------------
+
+global.maxDayTime = 300;
 
 // easy, mid, hard room value settings
     // timing in seconds
@@ -69,7 +82,7 @@ global.hard_multiplier = 3;
 
     // other constants
 global.fuelCost = 250;
-global.shovingFeePerBag = 30;
+global.incompleteFeePerBag = 30;
 global.stealRewardPerBag = 100;
 global.stealCaughtFinePerBag = 100;
 // no reward for reporting illegal goods -> just feel good about yourself
@@ -79,5 +92,4 @@ global.stealChance2 = 0.5;
 global.stealChance3 = 0.55;
 global.stealChance4 = 0.6;
 global.stealChance5 = 0.65;
-
 

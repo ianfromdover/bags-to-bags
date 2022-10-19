@@ -1,9 +1,8 @@
 /// @description Initialise Timer fn.
 
-displayedTime = global.dayTimeMax;
+displayedTime = global.dayTimeLeft; // overridden in room start
 timeIsRunning = true;
-
-Init();
+isLastFewSeconds = false;
 
 function Init()
 {
@@ -19,12 +18,16 @@ function Init()
 
 function OnEnd()
 {
-    // "time has ended" alert
-	timeIsRunning = false;
-	room_goto(EndOfDay);
+    // tell the player that "time has ended" to give them time to react
+	OnDayEnd();
 }
 
-function StopTimer()
+function StopTimer() // called by the pause button
 {
 	timeIsRunning = false;
+}
+
+function RestartTimer() // resume button
+{
+	timeIsRunning = true;
 }

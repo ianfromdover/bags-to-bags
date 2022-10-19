@@ -23,6 +23,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oBagSnake","path":"objects/oBagSnake/oBagSnake.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":704.0,"resourceVersion":"1.0","name":"inst_5C9D5CEE","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oBagSnake","path":"objects/oBagSnake/oBagSnake.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1056.0,"y":544.0,"resourceVersion":"1.0","name":"inst_1544A377","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oBagT","path":"objects/oBagT/oBagT.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":320.0,"resourceVersion":"1.0","name":"inst_59E307DB","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oHard2ONLYLASTDAY","path":"objects/oHard2ONLYLASTDAY/oHard2ONLYLASTDAY.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":992.0,"y":96.0,"resourceVersion":"1.0","name":"inst_667E2D05","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Bags","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oTrunk","path":"objects/oTrunk/oTrunk.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_41B4B700","path":"rooms/ParentTrip/ParentTrip.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":543.0,"y":304.0,"resourceVersion":"1.0","name":"inst_41B4B700","tags":[],"resourceType":"GMRInstance",},
@@ -50,6 +51,7 @@
     {"name":"inst_646B9AB","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_6C4DF957","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_587E7F8F","path":"rooms/rHard2/rHard2.yy",},
+    {"name":"inst_667E2D05","path":"rooms/rHard2/rHard2.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
