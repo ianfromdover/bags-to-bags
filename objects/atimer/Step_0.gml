@@ -4,7 +4,7 @@ if (timeIsRunning)
 {
 	if (currTime < 0) // time has run out
 	{
-		currTime = 0;
+		currTime = global.easyTime;
 		displayedTime = 0;
 	
 		OnEnd();

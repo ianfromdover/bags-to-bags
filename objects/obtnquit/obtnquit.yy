@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oBtnQuit",
   "spriteId": {
-    "name": "sBtnQuit",
-    "path": "sprites/sBtnQuit/sBtnQuit.yy",
+    "name": "quit",
+    "path": "sprites/quit/quit.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "UI",
     "path": "folders/Objects/UI.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oBtnQuit",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -14,6 +14,10 @@ function Init()
 	{
 		displayedTime = global.dayTimeLeft;
 	}
+	else
+	{
+		displayedTime = global.easyTime;
+	}
 	
 	currTime = displayedTime;
 }

@@ -53,6 +53,11 @@ global.tripMultiplier = 1;
 global.tripBagsIncomplete = 1;
 global.tripBagsTaken = 1;
 global.tripTotal = 0;
+global.reportedIllegal = false;
+global.caught = false; 
+global.profit = 0;
+global.fine = 0;
+global.tripTotalAmt = 0; 
 
 // ---------------
 // -- CONSTANTS --

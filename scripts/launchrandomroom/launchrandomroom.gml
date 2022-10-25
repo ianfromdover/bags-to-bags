@@ -55,6 +55,6 @@ function LaunchRandomRoom(_difficulty)
 			break;
 
 		default:
-			Log("Error: [aAlien: Create] invalid difficulty selected");
+		// 	Log("Error: [aAlien: Create] invalid difficulty selected");
 	}
 }
