@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnAbout",
   "spriteId": {
-    "name": "about",
-    "path": "sprites/about/about.yy",
+    "name": "sBtnAbout",
+    "path": "sprites/sBtnAbout/sBtnAbout.yy",
   },
   "solid": false,
   "visible": true,

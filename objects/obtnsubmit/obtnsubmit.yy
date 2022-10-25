@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oBtnSubmit",
-  "spriteId": {
-    "name": "submit",
-    "path": "sprites/submit/submit.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

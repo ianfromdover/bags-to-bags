@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnQuit",
   "spriteId": {
-    "name": "quit",
-    "path": "sprites/quit/quit.yy",
+    "name": "sBtnQuit",
+    "path": "sprites/sBtnQuit/sBtnQuit.yy",
   },
   "solid": false,
   "visible": true,

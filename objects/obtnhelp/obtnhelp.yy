@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnHelp",
   "spriteId": {
-    "name": "help",
-    "path": "sprites/help/help.yy",
+    "name": "sBtnHelp",
+    "path": "sprites/sBtnHelp/sBtnHelp.yy",
   },
   "solid": false,
   "visible": true,

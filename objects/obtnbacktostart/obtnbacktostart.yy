@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnBackToStart",
   "spriteId": {
-    "name": "bacak",
-    "path": "sprites/bacak/bacak.yy",
+    "name": "sBtnBack",
+    "path": "sprites/sBtnBack/sBtnBack.yy",
   },
   "solid": false,
   "visible": true,

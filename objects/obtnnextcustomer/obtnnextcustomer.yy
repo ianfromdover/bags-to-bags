@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnNextCustomer",
   "spriteId": {
-    "name": "nextcust",
-    "path": "sprites/nextcust/nextcust.yy",
+    "name": "sBtnNxtCust",
+    "path": "sprites/sBtnNxtCust/sBtnNxtCust.yy",
   },
   "solid": false,
   "visible": true,
