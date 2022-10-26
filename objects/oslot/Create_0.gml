@@ -1,7 +1,6 @@
 /// @description oSlot, a slot in the grid
-image_speed = 0; // to ensure that slots placed on their own don't flicker
+image_speed = 0; // dont auto change tweens
 image_index = 0; // 0 = nothing hovering, 1 = available, 2 = occupied
-dockedItem = noone; // the parent object of the squares that it occupies
 isOccupied = false;
 
 // assigned by SlotGrid
@@ -21,15 +20,13 @@ function CheckOccupied()
     return isOccupied;
 }
 
-function Dock(_itemId) // on release
+function Dock() // on mouse release
 {
-    dockedItem = _itemId; // TODO: dissolve logic item too
     isOccupied = true;
 }
 
-function Undock()
+function Undock() // on mouse press
 {
-    dockedItem = noone;
     isOccupied = false;
 }
 

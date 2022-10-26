@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oBG",
   "spriteId": {
     "name": "sTitleBG",
     "path": "sprites/sTitleBG/sTitleBG.yy",
@@ -28,8 +31,4 @@
     "name": "Titles",
     "path": "folders/Objects/UI/Titles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oBG",
-  "tags": [],
-  "resourceType": "GMObject",
 }

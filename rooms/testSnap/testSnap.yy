@@ -18,6 +18,12 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bags","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4D232005","properties":[],"isDnd":false,"objectId":{"name":"oBagCorner2","path":"objects/oBagCorner2/oBagCorner2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1184.0,"y":416.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_75A1B0F7","properties":[],"isDnd":false,"objectId":{"name":"oBagSnail","path":"objects/oBagSnail/oBagSnail.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1248.0,"y":704.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7FE1221E","properties":[],"isDnd":false,"objectId":{"name":"oValCross","path":"objects/oValCross/oValCross.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1056.0,"y":672.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_678E16D9","properties":[],"isDnd":false,"objectId":{"name":"oBagCorner","path":"objects/oBagCorner/oBagCorner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1248.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_40AEEBED","properties":[],"isDnd":false,"objectId":{"name":"oBagFunky","path":"objects/oBagFunky/oBagFunky.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1248.0,"y":224.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_79729835","properties":[],"isDnd":false,"objectId":{"name":"oBagCornerS","path":"objects/oBagCornerS/oBagCornerS.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":224.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4C59F660","properties":[],"isDnd":false,"objectId":{"name":"oBagL","path":"objects/oBagL/oBagL.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":416.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Slots","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4FD23F0F","properties":[],"isDnd":false,"objectId":{"name":"oTrunk","path":"objects/oTrunk/oTrunk.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":160.0,},
@@ -34,6 +40,12 @@
     {"name":"inst_121320F9","path":"rooms/testSnap/testSnap.yy",},
     {"name":"inst_4D232005","path":"rooms/testSnap/testSnap.yy",},
     {"name":"inst_4FD23F0F","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_75A1B0F7","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_7FE1221E","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_678E16D9","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_40AEEBED","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_79729835","path":"rooms/testSnap/testSnap.yy",},
+    {"name":"inst_4C59F660","path":"rooms/testSnap/testSnap.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -23,7 +23,7 @@
     {"id":{"name":"barFull","path":"sprites/barFull/barFull.yy",},"order":18,},
     {"id":{"name":"trunk2","path":"sounds/trunk2/trunk2.yy",},"order":1,},
     {"id":{"name":"sBtnQuit","path":"sprites/sBtnQuit/sBtnQuit.yy",},"order":23,},
-    {"id":{"name":"sTrunkSquare","path":"sprites/sTrunkSquare/sTrunkSquare.yy",},"order":0,},
+    {"id":{"name":"sSlot","path":"sprites/sSlot/sSlot.yy",},"order":0,},
     {"id":{"name":"Color3","path":"scripts/Color3/Color3.yy",},"order":2,},
     {"id":{"name":"oSlot","path":"objects/oSlot/oSlot.yy",},"order":5,},
     {"id":{"name":"sBagCorner2","path":"sprites/sBagCorner2/sBagCorner2.yy",},"order":1,},
@@ -235,8 +235,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"testAllBags","path":"rooms/testAllBags/testAllBags.yy",},},
     {"roomId":{"name":"testSnap","path":"rooms/testSnap/testSnap.yy",},},
+    {"roomId":{"name":"testAllBags","path":"rooms/testAllBags/testAllBags.yy",},},
     {"roomId":{"name":"StartMenu","path":"rooms/StartMenu/StartMenu.yy",},},
     {"roomId":{"name":"About","path":"rooms/About/About.yy",},},
     {"roomId":{"name":"Help","path":"rooms/Help/Help.yy",},},

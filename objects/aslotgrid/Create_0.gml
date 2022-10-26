@@ -80,16 +80,28 @@ function SetCoordColBlocked(_slot_coords)
     slots[_slot_coords.x][_slot_coords.y].SetColBlocked();
 }
 
-function DockSlots(_slot_coords, _item)
+// called once on dock
+function StoreItem(_item)
 {
-    slots[_slot_coords.x][_slot_coords.y].Dock(_item);
     itemsContained.add(_item);
 }
 
-function UndockSlots(_slot_coords)
+// called once on undock
+function TakeOutItem(_item)
+{
+    itemsContained.removeValue(_item);
+}
+
+// called by for loop in aItem, as many times as coords
+function DockSlot(_slot_coords)
+{
+    slots[_slot_coords.x][_slot_coords.y].Dock();
+}
+
+// called by for loop in aItem, as many times as coords
+function UndockSlot(_slot_coords)
 {
     slots[_slot_coords.x][_slot_coords.y].Undock();
-    itemsContained.removeValue(_item);
 }
 
 // store and take out of the grid, add to itemlist

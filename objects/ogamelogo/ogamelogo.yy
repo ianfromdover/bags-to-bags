@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oGameLogo",
   "spriteId": {
     "name": "sGameLogo",
     "path": "sprites/sGameLogo/sGameLogo.yy",
@@ -28,8 +31,4 @@
     "name": "Titles",
     "path": "folders/Objects/UI/Titles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oGameLogo",
-  "tags": [],
-  "resourceType": "GMObject",
 }

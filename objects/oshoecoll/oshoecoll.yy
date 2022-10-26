@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oShoeColl",
   "spriteId": {
     "name": "sShoeColl",
     "path": "sprites/sShoeColl/sShoeColl.yy",
@@ -31,8 +34,4 @@
     "name": "Aliens",
     "path": "folders/Objects/Aliens.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oShoeColl",
-  "tags": [],
-  "resourceType": "GMObject",
 }

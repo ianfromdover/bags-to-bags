@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oSlot",
   "spriteId": {
-    "name": "sTrunkSquare",
-    "path": "sprites/sTrunkSquare/sTrunkSquare.yy",
+    "name": "sSlot",
+    "path": "sprites/sSlot/sSlot.yy",
   },
   "solid": false,
   "visible": true,

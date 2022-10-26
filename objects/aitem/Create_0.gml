@@ -43,10 +43,13 @@ function ForeachSlot(baseSlot, fn) // the function is of the form
          * To use Continue keyword, "return 1;" in the fn.
          * To use Break keyword, "return 2;" in the fn.
          */
+		var shouldBreak = undefined;
         for (var i = 0; i < _size; i++)
         {
+			if (shouldBreak != undefined) break;
+			
             var curr_coords = coords.sum(_occupiedSquares[i]);
-            fn(parentGrid, curr_coords);
+            shouldBreak = fn(parentGrid, curr_coords);
         }
     }
 }
@@ -54,7 +57,7 @@ function ForeachSlot(baseSlot, fn) // the function is of the form
 // Drag Start (touchscreen) || Mouse Left Pressed (mouse)
 function OnDragStart(cursor_x, cursor_y)
 {
-    // Undock();
+    UndockSlots();
     isBeingDragged = true;
 
     // save cursor offset
@@ -62,25 +65,29 @@ function OnDragStart(cursor_x, cursor_y)
     cursorOffsetY = y - cursor_y;
 }
 
-function Undock() // with Trunk
+function UndockSlots() // with Trunk
 {
-    var _occupiedSquares = occupiedSquares;
-    var _size = size;
-    if (nearestSlot == noone) exit; // piece is not docked
+    if (nearestSlot == noone) return; // piece is not docked
 
-    with (nearestSlot) // the anchor for the piece
+    ForeachSlot(nearestSlot, Undock);
+
+    var item = id;
+    with (nearestSlot)
     {
-        for (var i = 0; i < _size; i++) // for each coord in array
-        {
-            var curr_coords = coords.sum(_occupiedSquares[i]); // get each relative
-            parentGrid.UndockSlots(curr_coords);
-        }
+        parentGrid.TakeOutItem(item);
     }
+}
+
+function Undock(parentGrid, curr_coords)
+{
+    if (parentGrid.CoordIsOutsideGrid(curr_coords)) return;
+
+    parentGrid.UndockSlot(curr_coords);
 }
 
 function Follow(cursor_x, cursor_y)
 {
-    if (!isBeingDragged) exit; // this line is triggered in Step event
+    if (!isBeingDragged) return; // this line is triggered in Step event
 
     x = cursor_x + cursorOffsetX;
     y = cursor_y + cursorOffsetY;
@@ -92,8 +99,6 @@ function HoverCheck()
 {
 	// 1. determine nearest slot to center of hovering piece
 	var nearestList = ds_list_create();
-	var _occupiedSquares = occupiedSquares;
-    var _size = size;
     allAvail = true;
 
 	instance_place_list(x, y, oSlot, nearestList, true);
@@ -108,7 +113,7 @@ function HoverCheck()
         // for ending drag
         allAvail = false;
         nearestSlot = noone;
-        exit;
+        return;
     }
 	
     // 2. check each anticipated slot if is free
@@ -123,16 +128,13 @@ function FitSegments(parentGrid, curr_coords)
     if (!parentGrid.CoordIsAvail(curr_coords))
     {
         allAvail = false;
-	    return; // now is just a Continue, make it break.
+	    return "break"; // breaks the loop
     }
 }
 
 function SetSlotCol(parentGrid, curr_coords)
 {
-    if (!parentGrid.CoordIsAvail(curr_coords))
-    {
-        return;
-    }
+    if (!parentGrid.CoordIsAvail(curr_coords)) return;
 
     if (allAvail)
     {
@@ -148,11 +150,11 @@ function SetSlotCol(parentGrid, curr_coords)
 function OnDragEnd()
 {
     isBeingDragged = false;
-    var _occupiedSquares = occupiedSquares;
 
-    /*
-    if (allAvail)
+    if (allAvail) // snap to grid
     {
+        ForeachSlot(nearestSlot, Dock);
+
         // get px coords of the slot
         var slot_x;
         var slot_y;
@@ -162,31 +164,47 @@ function OnDragEnd()
         {
             slot_x = x;
             slot_y = y;
+            parentGrid.StoreItem(item);
 
             // px pos on screen
-            prevPxPosOfOrigin = new Vector2(x, y);
-            // dock item to the slots
-            for (var i = 0; i < _size; i++)
-            {
-                var curr_coords = coords.sum(_occupiedSquares[i]);
-                parentGrid.DockSlots(curr_coords, item);
-            }
+            // prevPxPosOfOrigin = new Vector2(x, y); // for stretch goal
         }
 
         // move the item to the slot
-        // bug: need to include the offset to the center!
+        // TODO: bug: need to include the offset to the center! for items whose center is on a line.
         x = slot_x;
         y = slot_y;
     }
-    else // move item back to prev position
+    else 
     {
-        if (prevPxPosOfOrigin == noone) exit; // item has never docked before
+        /*
+           Stretch goal: snap back to prev pos on release when released over
+           another piece or invalid grid pos, but not when released outside grid.
 
-        // move the item back
+           2 player intents here.
+           1. they wanna let go on open space and let it stay there
+           2. they wanna let go on invalid gridSpace and make it snap back to orig
+           */
+
+        /*
+        if (prevPxPosOfOrigin == noone) return; // item has never docked before
+
+        // move item back to prev position
         x = prevPxPosOfOrigin.x;
         y = prevPxPosOfOrigin.y;
+        */
     }
     // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. 
-    // this is possible with the nearest list. but it needs to be outside that function
-    */
+    // for that: new fn
+    // if nearestList[| 0] not allAvail, repeat with nearestList[| 1].
+    // if that is not allAvail, repeat with [| 2] and [| 3].
+    // if [| 3] is also not allAvail, show the [| 1] outline being unavail
 }
+
+function Dock(parentGrid, curr_coords)
+{
+    if (parentGrid.CoordIsOutsideGrid(curr_coords)) return;
+
+    parentGrid.DockSlot(curr_coords);
+}
+

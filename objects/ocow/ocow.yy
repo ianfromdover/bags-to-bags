@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oCow",
   "spriteId": {
     "name": "sCow",
     "path": "sprites/sCow/sCow.yy",
@@ -31,8 +34,4 @@
     "name": "Aliens",
     "path": "folders/Objects/Aliens.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oCow",
-  "tags": [],
-  "resourceType": "GMObject",
 }

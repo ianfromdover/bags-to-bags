@@ -11,3 +11,5 @@ e = new Vector2(0, -1);
 
 array_push(occupiedSquares, a, b, c, d, e);
 Init();
+
+// for some reason, is not working??
