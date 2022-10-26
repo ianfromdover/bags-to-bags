@@ -24,7 +24,7 @@ function Init() // create slots
             var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot); // yes
             with (inst)
             {
-                parentGrid = self;
+                parentGrid = other;
                 coords = new Vector2(i, j); // (0, 0) btm left corner
             }
 
@@ -45,6 +45,7 @@ function Init() // create slots
 // ----- public methods -----
 // --------------------------
 
+// check is piece dropped over a slot which is occupied?
 function CoordIsOccupied(_slot_coords)
 {
     slot = slots[_slot_coords.x][_slot_coords.y];
@@ -57,6 +58,16 @@ function CoordIsOutsideGrid(_slot_coords)
         || _slot_coords.y < 0
         || _slot_coords.x >= width
         || _slot_coords.y >= height;
+}
+
+function CoordIsAvail(_slot_coords)
+{
+    if (CoordIsOutsideGrid(_slot_coords))
+    {
+        return false;
+    }
+
+    return !CoordIsOccupied(_slot_coords);
 }
 
 function SetCoordColAvail(_slot_coords)
@@ -80,6 +91,8 @@ function UndockSlots(_slot_coords)
     slots[_slot_coords.x][_slot_coords.y].Undock();
     itemsContained.removeValue(_item);
 }
+
+// store and take out of the grid, add to itemlist
 
 function SetAllColDef()
 {

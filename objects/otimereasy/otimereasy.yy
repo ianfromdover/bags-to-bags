@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oTimerEasy",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -28,8 +31,4 @@
     "name": "Trip",
     "path": "folders/Objects/Trip.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oTimerEasy",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -67,8 +67,13 @@ function SetColor(_col)
         case "occupied":
             image_index = 2;
             break;
+        case "default":
+            image_index = 0;
+            break;
+        /* idk why this block runs all the time
         default: // nothing hovering over
             image_index = 0;
+        */
     }
 }
 

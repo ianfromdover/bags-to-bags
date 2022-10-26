@@ -1,4 +1,4 @@
-/// @description
+/// @description aItem, an abstract item
 // add unique item properties using the Room Start event instead.
 
 // -----------------------
@@ -6,9 +6,8 @@
 // -----------------------
 isStealable = false; // implement chk to collide with personal bag
 
-occupiedSquares = [];
-
-size = array_length(occupiedSquares);
+occupiedSquares = []; // populated during Room Start
+size = 0; // no of occ squares, filled during Room Start by Init
 
 // ---------------------
 // ----- temp vars -----
@@ -25,10 +24,37 @@ cursorOffsetY = 0;
 // ----- methods -----
 // -------------------
 
+function Init()
+{
+    size = array_length(occupiedSquares);
+}
+
+function ForeachSlot(baseSlot, fn) // the function is of the form
+{                                  // int fn(oSlotGrid parentGrid, Vector2 curr_coords)
+    var _size = size;
+    var _occupiedSquares = occupiedSquares;
+    with (baseSlot)
+    {
+        /**
+         * optimisation (to implement next time)
+         * isContinue = fn(parentGrid, curr_coords);
+         *
+         * Fns must return 0 at the end to loop normally.
+         * To use Continue keyword, "return 1;" in the fn.
+         * To use Break keyword, "return 2;" in the fn.
+         */
+        for (var i = 0; i < _size; i++)
+        {
+            var curr_coords = coords.sum(_occupiedSquares[i]);
+            fn(parentGrid, curr_coords);
+        }
+    }
+}
+
 // Drag Start (touchscreen) || Mouse Left Pressed (mouse)
 function OnDragStart(cursor_x, cursor_y)
 {
-    Undock();
+    // Undock();
     isBeingDragged = true;
 
     // save cursor offset
@@ -39,11 +65,12 @@ function OnDragStart(cursor_x, cursor_y)
 function Undock() // with Trunk
 {
     var _occupiedSquares = occupiedSquares;
+    var _size = size;
     if (nearestSlot == noone) exit; // piece is not docked
 
     with (nearestSlot) // the anchor for the piece
     {
-        for (var i = 0; i < size; i++) // for each coord in array
+        for (var i = 0; i < _size; i++) // for each coord in array
         {
             var curr_coords = coords.sum(_occupiedSquares[i]); // get each relative
             parentGrid.UndockSlots(curr_coords);
@@ -57,26 +84,23 @@ function Follow(cursor_x, cursor_y)
 
     x = cursor_x + cursorOffsetX;
     y = cursor_y + cursorOffsetY;
-    HoverCheck(x, y); // ask the slot to change col depending on availabilit
-	// maybe move line to collision events
+    HoverCheck(); // ask the slot to change col depending on availabilit
 }
 
 // chks if piece's placement on grid will be free
-// TODO: heavily optimise. delete all structs lists and vars when they are done
-function HoverCheck(_x, _y)
+function HoverCheck()
 {
-    // 1. determine nearest squares to middle of hovering piece
-    var nearestList = new List();
+	// 1. determine nearest slot to center of hovering piece
+	var nearestList = ds_list_create();
+	var _occupiedSquares = occupiedSquares;
+    var _size = size;
+    allAvail = true;
 
-    var _occupiedSquares = occupiedSquares;
+	instance_place_list(x, y, oSlot, nearestList, true);
+	nearestSlot = nearestList[| 0];
 
-
-    // find nearest slot to center of item
-    // use the item's collision mask to check
-    instance_place_list(_x, _y, oSlot, nearestList, true); // sort by dist, TODO: see whats going wrong here
-    nearestSlot = nearestList.getValue(0); // returns null when overlapping
-
-    // 2. check each anticipated slot if is free
+    // list is no longer needed
+    ds_list_destroy(nearestList);
 
     // if the piece is not on a grid
     if (is_undefined(nearestSlot))
@@ -84,49 +108,40 @@ function HoverCheck(_x, _y)
         // for ending drag
         allAvail = false;
         nearestSlot = noone;
-
-        // clean up
-        nearestList = nearestList.destroy();
         exit;
     }
+	
+    // 2. check each anticipated slot if is free
+    ForeachSlot(nearestSlot, FitSegments);
 
-    with (nearestSlot)
+    // 3. if one is not free, make all the slots an invalid colour
+    ForeachSlot(nearestSlot, SetSlotCol);
+}
+
+function FitSegments(parentGrid, curr_coords)
+{
+    if (!parentGrid.CoordIsAvail(curr_coords))
     {
-        // reset previous squares' colour first
-        // parentGrid.SetAllColDef(); // does the colours reset after each frame?
+        allAvail = false;
+	    return; // now is just a Continue, make it break.
+    }
+}
 
-        // try to fit the square segments into anticipated position
-        for (var i = 0; i < size; i++) // make into helper fn. list of grid posns, for each slot, activate api
-        {
-            var curr_coords = coords.sum(_occupiedSquares[i]);
-
-            // check is piece dropped outside the grid?
-            if (parentGrid.CoordIsOutsideGrid(curr_coords)
-                // check is piece dropped over a slot which is occupied?
-                || parentGrid.CoordIsOccupied(curr_coords))
-            {
-                AllAvail = false;
-                break;
-            }
-        }
-
-        // 3. set colour
-        for (var i = 0; i < size; i++)
-        {
-            var curr_coords = coords.sum(_occupiedSquares[i]);
-            if (AllAvail)
-            {
-                parentGrid.SetCoordColAvail(curr_coords);
-            }
-            else
-            {
-                parentGrid.SetCoordColBlocked(curr_coords);
-            }
-        }
+function SetSlotCol(parentGrid, curr_coords)
+{
+    if (!parentGrid.CoordIsAvail(curr_coords))
+    {
+        return;
     }
 
-    // clean up
-    nearestList = nearestList.destroy();
+    if (allAvail)
+    {
+        parentGrid.SetCoordColAvail(curr_coords);
+    }
+    else
+    {
+        parentGrid.SetCoordColBlocked(curr_coords);
+    }
 }
 
 // Drag End (touchscreen) || Mouse Left Released (mouse)
@@ -135,6 +150,7 @@ function OnDragEnd()
     isBeingDragged = false;
     var _occupiedSquares = occupiedSquares;
 
+    /*
     if (allAvail)
     {
         // get px coords of the slot
@@ -150,7 +166,7 @@ function OnDragEnd()
             // px pos on screen
             prevPxPosOfOrigin = new Vector2(x, y);
             // dock item to the slots
-            for (var i = 0; i < size; i++)
+            for (var i = 0; i < _size; i++)
             {
                 var curr_coords = coords.sum(_occupiedSquares[i]);
                 parentGrid.DockSlots(curr_coords, item);
@@ -172,5 +188,5 @@ function OnDragEnd()
     }
     // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. 
     // this is possible with the nearest list. but it needs to be outside that function
+    */
 }
-
