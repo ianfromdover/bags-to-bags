@@ -1,3 +1,4 @@
+// oTripManager.
 difficulty = "easy";
 noOfBags = 5;
 timerPosX = 75; // pixels
@@ -39,13 +40,14 @@ function OnTripEnd()
 	global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(difficulty) + global.tripTimeLeft;
 	
     global.cash += CalcMoneyFrmRemainingTime(global.tripTimeLeft, difficulty);
+    global.tripMultiplier = GetDiffMultiplier(difficulty);
     
     // TODO: make this responsive to the gameplay
 	global.reportedIllegal = false; // deterministic. assumes that puzzles that have illegal items have no valuables
     noOfBagsLoaded = global.activeTrunk.itemsContained.getSize();
-    noOfBagsStolen = global.activePersBag.itemsContained.getSize();
-    global.tripBagsIncomplete = noOfBags - noOfBagsLoaded - noOfBagsStolen;
-    global.caught = random(1) < ((1 / 20) * noOfBagsStolen + 0.4)
+    global.tripBagsTaken = global.activePersBag.itemsContained.getSize();
+    global.tripBagsIncomplete = noOfBags - noOfBagsLoaded - global.tripBagsTaken;
+    global.caught = random(1) < ((1 / 20) * global.tripBagsTaken + 0.4)
 
     // this should be done in the game scene in OnTripEnd
 
@@ -95,6 +97,25 @@ function GetLevelMaxTime(_diff)
             Log("Error: [TripManager: CalcMoneyFrmRemainingTime] invalid difficulty selected");
     };
 }
+
+function GetDiffMultiplier(_diff)
+{
+    switch (_diff)
+    {
+        case "easy":
+            return global.easy_multiplier;
+            break;
+        case "mid":
+            return global.mid_multiplier;
+            break;
+        case "hard":
+            return global.hard_multiplier;
+            break;
+        default:
+            Log("Error: [TripManager: CalcMoneyFrmRemainingTime] invalid difficulty selected");
+    };
+}
+
 function CalcMoneyFrmRemainingTime(_t, _diff) // _t time is a float
 {
 
