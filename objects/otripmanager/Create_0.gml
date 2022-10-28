@@ -1,24 +1,35 @@
 difficulty = "easy";
+noOfBags = 5;
 timerPosX = 75; // pixels
 timerPosY = 60; // pixels
 
 // global.activeTimer; // get the remaining time from this. it will call onSubmit.
 global.tripManager = id;
-
-switch (difficulty) // TODO: change to room's difficulty
+/**
+  * Related Global Vars
+  * activeTrunk
+  * activePersBag
+  */
+function Init(diff, numBags)
 {
-    case "easy":
-        timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerEasy);
-        break;
-    case "mid":
-        timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerMid);
-        break;
-    case "hard":
-        timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerHard);
-        break;
-    default:
-        Log("Error: [TripManager: Init] invalid difficulty selected");
-};
+    difficulty = diff;
+    noOfBags = numBags;
+
+    switch (difficulty)
+    {
+        case "easy":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerEasy);
+            break;
+        case "mid":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerMid);
+            break;
+        case "hard":
+            timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerHard);
+            break;
+        default: // does this still run everytime?
+            Log("Error: [TripManager: Init] invalid difficulty selected");
+    };
+}
 
 function OnTripEnd()
 {
@@ -31,7 +42,9 @@ function OnTripEnd()
     
     // TODO: make this responsive to the gameplay
 	global.reportedIllegal = false; // deterministic. assumes that puzzles that have illegal items have no valuables
-    noOfBagsStolen = 1; // TODO: wire this up
+    noOfBagsLoaded = global.activeTrunk.itemsContained.getSize();
+    noOfBagsStolen = global.activePersBag.itemsContained.getSize();
+    global.tripBagsIncomplete = noOfBags - noOfBagsLoaded - noOfBagsStolen;
     global.caught = random(1) < ((1 / 20) * noOfBagsStolen + 0.4)
 
     // this should be done in the game scene in OnTripEnd

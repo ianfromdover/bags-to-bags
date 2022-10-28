@@ -45,9 +45,9 @@ msg = "BASE       +" + string(global.tripBase) + line
     + "PENALTY    -" + string(global.unsortedPenalty) + line
 	+ line
 	+ "BAGS TAKEN  " + string(global.tripBagsTaken) + line
-	+ reportIllegMsg // only 1 will show
-	+ stealMsg
-	+ caughtMsg
+	// + reportIllegMsg // only 1 will show
+	// + stealMsg
+	// + caughtMsg
 	+ line
 	+ "--------------" + line
 	+ "TOTAL      " + total + line;

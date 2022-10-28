@@ -40,6 +40,7 @@ global.aliensServed = 0;
 // -- TRIP INSTANCES --
 // --------------------
 
+global.difficulty = "mid";
 global.activePersBag = noone;
 global.activeTrunk = noone;
 

@@ -1,22 +1,23 @@
 /// @description Initialise Timer fn.
 // can use globals for this to talk with the trip manager.
 
-endFn = 0; // assigned in room start
-displayedTime = global.easyTime;
-timeIsRunning = true;
-isLastFewSeconds = false;
+// public vars that must be overwritten in children
+endFn = global.tripManager.OnTripEnd;
+difficultyTime = global.easyTime;
 
 function Init()
 {
 	global.activeTimer = id;
+	isLastFewSeconds = false;
+	timeIsRunning = true;
 	
-	if (displayedTime > global.dayTimeLeft)
+	if (difficultyTime > global.dayTimeLeft)
 	{
 		displayedTime = global.dayTimeLeft;
 	}
 	else
 	{
-		displayedTime = global.easyTime;
+		displayedTime = difficultyTime;
 	}
 	
 	currTime = displayedTime;
@@ -31,3 +32,5 @@ function StopTimer()
 {
 	timeIsRunning = false;
 }
+
+Init();

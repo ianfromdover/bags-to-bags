@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oTimerHard",
+  "name": "TME1",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "aTimer",
-    "path": "objects/aTimer/aTimer.yy",
+    "name": "oTripManager",
+    "path": "objects/oTripManager/oTripManager.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,12 +25,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Trip",
-    "path": "folders/Objects/Trip.yy",
+    "name": "TMEasy",
+    "path": "folders/Objects/Managers/TMEasy.yy",
   },
 }

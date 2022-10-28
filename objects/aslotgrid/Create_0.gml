@@ -6,10 +6,20 @@ slotPxLen = 50;
 
 // this checks if the piece is outside the trunk or not.
 slots = [];
-itemsContained = new List();
+itemsContained = new Set();
 
-function Init() // create slots
+function Init(isTrunk) // create slots
 {
+    if (isTrunk)
+    {
+        global.activeTrunk = id;
+    }
+    else
+    {
+        global.activePersBag = id;
+    }
+    // assumption: if it is not a trunk, it is a personal bag
+
     // pos of temp slot being initialised
     slPosX = (slotPxLen / 2) + x; // first slot at (0, 0) btm left of grid
     slPosY = (slotPxLen / 2) + y;

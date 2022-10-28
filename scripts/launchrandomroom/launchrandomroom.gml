@@ -35,6 +35,18 @@ function LaunchRandomRoom(_difficulty)
 				case 4:
 					room_goto(rMid4);
 					break;
+				case 5:
+					room_goto(rMid5);
+					break;
+				case 6:
+					room_goto(rMid6);
+					break;
+				case 7:
+					room_goto(rMid7);
+					break;
+				case 8:
+					room_goto(rMid8);
+					break;
 			}
 			break;
 
@@ -50,6 +62,18 @@ function LaunchRandomRoom(_difficulty)
 					break;
 				case 3:
 					room_goto(rHard3);
+					break;
+				case 4:
+					room_goto(rHard4);
+					break;
+				case 5:
+					room_goto(rHard5);
+					break;
+				case 6:
+					room_goto(rHard6);
+					break;
+				case 7:
+					room_goto(rHard7);
 					break;
 			}
 			break;

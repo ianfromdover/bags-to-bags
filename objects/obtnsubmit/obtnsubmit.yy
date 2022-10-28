@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oBtnSubmit",
-  "spriteId": null,
+  "spriteId": {
+    "name": "sBtnResume",
+    "path": "sprites/sBtnResume/sBtnResume.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

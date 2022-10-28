@@ -1,1 +1,1 @@
-difficulty = "easy";
+Init("easy", 5);
