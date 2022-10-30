@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnSubmit",
   "spriteId": {
-    "name": "sBtnResume",
-    "path": "sprites/sBtnResume/sBtnResume.yy",
+    "name": "sSubmit",
+    "path": "sprites/sSubmit/sSubmit.yy",
   },
   "solid": false,
   "visible": true,

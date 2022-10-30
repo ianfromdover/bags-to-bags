@@ -8,6 +8,8 @@ isStealable = false; // implement chk to collide with personal bag
 
 occupiedSquares = []; // populated during Room Start
 size = 0; // no of occ squares, filled during Room Start by Init
+boundingLenX = 0;
+boundingLenY = 0;
 
 // ---------------------
 // ----- temp vars -----
@@ -24,9 +26,11 @@ cursorOffsetY = 0;
 // ----- methods -----
 // -------------------
 
-function Init()
+function Init() // (blX, blY)
 {
     size = array_length(occupiedSquares);
+    boundingLenX = 0; // blX;
+    boundingLenY = 0; // blY;
 }
 
 function ForeachSlot(baseSlot, fn) // the function is of the form
@@ -207,4 +211,63 @@ function Dock(parentGrid, curr_coords)
 
     parentGrid.DockSlot(curr_coords);
 }
+
+/*
+function RotateL()
+{
+    Rotate(false);
+}
+
+function RotateR()
+{
+    Rotate(true);
+}
+
+function Rotate(isClockwise90)
+{
+    var xEven = boundingLenX % 2 == 0;
+    var yEven = boundingLenY % 2 == 0;
+    if (xEven && yEven)
+    {
+        if (isClockwise90)
+        {
+            Swap(_x, _y); // yet to implement
+            _x = -_x; // yet to reference and define
+            _y--;
+        }
+        else
+        {
+            _y++;
+            _x = -_x;
+            Swap(_x, _y);
+        }
+    }
+
+    if (!xEven && !yEven)
+    {
+        if (isClockwise90)
+        {
+            Swap(_x, _y);
+            _x = -_x;
+        }
+        else
+        {
+            _x = -_x;
+            Swap(_x, _y);
+        }
+    }
+}
+
+function FlipHrz()
+{
+    if (xEven)
+    {
+        _x = 1 -_x;
+    }
+    else
+    {
+        _x = -_x;
+    }
+}
+*/
 
