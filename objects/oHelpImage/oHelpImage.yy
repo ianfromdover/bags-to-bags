@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "pbagicon",
+  "name": "oHelpImage",
   "spriteId": {
-    "name": "sPersonalBag",
-    "path": "sprites/sPersonalBag/sPersonalBag.yy",
+    "name": "sHelpImage",
+    "path": "sprites/sHelpImage/sHelpImage.yy",
   },
   "solid": false,
   "visible": true,

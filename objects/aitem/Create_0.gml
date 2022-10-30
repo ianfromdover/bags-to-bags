@@ -47,11 +47,11 @@ function ForeachSlot(baseSlot, fn) // the function is of the form
          * To use Continue keyword, "return 1;" in the fn.
          * To use Break keyword, "return 2;" in the fn.
          */
-		var shouldBreak = undefined;
+        var shouldBreak = undefined;
         for (var i = 0; i < _size; i++)
         {
-			if (shouldBreak != undefined) break;
-			
+            if (shouldBreak != undefined) break;
+
             var curr_coords = coords.sum(_occupiedSquares[i]);
             shouldBreak = fn(parentGrid, curr_coords);
         }
@@ -101,12 +101,12 @@ function Follow(cursor_x, cursor_y)
 // chks if piece's placement on grid will be free
 function HoverCheck()
 {
-	// 1. determine nearest slot to center of hovering piece
-	var nearestList = ds_list_create();
+    // 1. determine nearest slot to center of hovering piece
+    var nearestList = ds_list_create();
     allAvail = true;
 
-	instance_place_list(x, y, oSlot, nearestList, true);
-	nearestSlot = nearestList[| 0];
+    instance_place_list(x, y, oSlot, nearestList, true);
+    nearestSlot = nearestList[| 0];
 
     // list is no longer needed
     ds_list_destroy(nearestList);
@@ -119,7 +119,7 @@ function HoverCheck()
         nearestSlot = noone;
         return;
     }
-	
+
     // 2. check each anticipated slot if is free
     ForeachSlot(nearestSlot, FitSegments);
 
@@ -132,7 +132,7 @@ function FitSegments(parentGrid, curr_coords)
     if (!parentGrid.CoordIsAvail(curr_coords))
     {
         allAvail = false;
-	    return "break"; // breaks the loop
+        return "break"; // breaks the loop
     }
 }
 
@@ -188,15 +188,15 @@ function OnDragEnd()
            2 player intents here.
            1. they wanna let go on open space and let it stay there
            2. they wanna let go on invalid gridSpace and make it snap back to orig
-           */
+         */
 
         /*
-        if (prevPxPosOfOrigin == noone) return; // item has never docked before
+           if (prevPxPosOfOrigin == noone) return; // item has never docked before
 
         // move item back to prev position
         x = prevPxPosOfOrigin.x;
         y = prevPxPosOfOrigin.y;
-        */
+         */
     }
     // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. 
     // for that: new fn
@@ -212,7 +212,6 @@ function Dock(parentGrid, curr_coords)
     parentGrid.DockSlot(curr_coords);
 }
 
-/*
 function RotateL()
 {
     Rotate(false);
@@ -227,33 +226,76 @@ function Rotate(isClockwise90)
 {
     var xEven = boundingLenX % 2 == 0;
     var yEven = boundingLenY % 2 == 0;
-    if (xEven && yEven)
-    {
-        if (isClockwise90)
-        {
-            Swap(_x, _y); // yet to implement
-            _x = -_x; // yet to reference and define
-            _y--;
-        }
-        else
-        {
-            _y++;
-            _x = -_x;
-            Swap(_x, _y);
-        }
-    }
 
-    if (!xEven && !yEven)
+    for (var i = 0; i < size; i++)
     {
-        if (isClockwise90)
+        if (xEven && yEven) // eg 2x4 item
         {
-            Swap(_x, _y);
-            _x = -_x;
+            if (isClockwise90)
+            {
+                curr = occupiedSquares[i]; // type: Vector2
+                curr.flip();
+                curr.x = -curr.x;
+                curr.y--;
+
+                /*
+                Swap(_x, _y);
+                _x = -_x;
+                _y--;
+                */
+            }
+            else
+            {
+                _y++;
+                _x = -_x;
+                Swap(_x, _y);
+            }
         }
-        else
+
+        if (xEven && !yEven) // eg 2x3 item
         {
-            _x = -_x;
-            Swap(_x, _y);
+            if (isClockwise90)
+            {
+                Swap(_x, _y);
+                _y--;
+                _x = -_x;
+            }
+            else
+            {
+                _x = -_x;
+                Swap(_x, _y);
+            }
+            Swap(boundingLenX, boundingLenY);
+        }
+
+        if (!xEven && yEven) // eg 1x2 item
+        {
+            if (isClockwise90)
+            {
+                Swap(_x, _y);
+                _x = -_x;
+            }
+            else
+            {
+                _y++;
+                _x = -_x;
+                Swap(_x, _y);
+            }
+            Swap(boundingLenX, boundingLenY);
+        }
+
+        if (!xEven && !yEven) // eg 3x1 item
+        {
+            if (isClockwise90)
+            {
+                Swap(_x, _y);
+                _x = -_x;
+            }
+            else
+            {
+                _x = -_x;
+                Swap(_x, _y);
+            }
         }
     }
 }
@@ -269,5 +311,4 @@ function FlipHrz()
         _x = -_x;
     }
 }
-*/
 
