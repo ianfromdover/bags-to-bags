@@ -10,4 +10,4 @@ d = new Vector2(0, 1);
 e = new Vector2(1, 1);
 
 array_push(occupiedSquares, a, b, c, d, e);
-Init();
+InitTest(3, 3);

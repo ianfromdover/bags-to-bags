@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBtnSubmit",
+  "name": "oBtnNextDay",
   "spriteId": {
-    "name": "sSubmit",
-    "path": "sprites/sSubmit/sSubmit.yy",
+    "name": "sNextDay",
+    "path": "sprites/sNextDay/sNextDay.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,14 +29,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":6,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Controls",
-    "path": "folders/Objects/UI/Game Controls.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
 }

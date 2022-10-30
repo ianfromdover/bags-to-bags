@@ -43,6 +43,7 @@ global.aliensServed = 0;
 global.difficulty = "mid";
 global.activePersBag = noone;
 global.activeTrunk = noone;
+global.itemBeingDragged = noone;
 
 // --------------------
 // -- TRIP TEMP VARS --

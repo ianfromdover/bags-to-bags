@@ -33,6 +33,13 @@ function Init() // (blX, blY)
     boundingLenY = 0; // blY;
 }
 
+function InitTest(blX, blY) // TODO: apply these to all the bags
+{
+    size = array_length(occupiedSquares);
+    boundingLenX = blX;
+    boundingLenY = blY;
+}
+
 function ForeachSlot(baseSlot, fn) // the function is of the form
 {                                  // int fn(oSlotGrid parentGrid, Vector2 curr_coords)
     var _size = size;
@@ -63,6 +70,7 @@ function OnDragStart(cursor_x, cursor_y)
 {
     UndockSlots();
     isBeingDragged = true;
+    global.itemBeingDragged = id;
 
     // save cursor offset
     cursorOffsetX = x - cursor_x;
@@ -154,6 +162,7 @@ function SetSlotCol(parentGrid, curr_coords)
 function OnDragEnd()
 {
     isBeingDragged = false;
+    global.itemBeingDragged = noone;
 
     if (allAvail) // snap to grid
     {
@@ -222,93 +231,70 @@ function RotateR()
     Rotate(true);
 }
 
-function Rotate(isClockwise90)
+function Rotate(isClockwise90) // for this to work, add bounding lengths to every item
+    // add the image sprite rotation.
 {
     var xEven = boundingLenX % 2 == 0;
     var yEven = boundingLenY % 2 == 0;
 
+    if (xEven != yEven)
+    {
+        // swap bounding lengths
+        var temp = boundingLenX;
+        boundingLenX = boundingLenY;
+        boundingLenY = temp;
+    }
+
     for (var i = 0; i < size; i++)
     {
-        if (xEven && yEven) // eg 2x4 item
-        {
-            if (isClockwise90)
-            {
-                curr = occupiedSquares[i]; // type: Vector2
-                curr.flip();
-                curr.x = -curr.x;
-                curr.y--;
+        var curr = occupiedSquares[i]; // type: Vector2
 
-                /*
-                Swap(_x, _y);
-                _x = -_x;
-                _y--;
-                */
-            }
-            else
-            {
-                _y++;
-                _x = -_x;
-                Swap(_x, _y);
-            }
+        if (isClockwise90)
+        {
+            curr.flip();
+            curr.x = -curr.x;
+            if (xEven) curr.y--;
+            image_angle -= 90;
+        }
+        else // anticlockwise
+        {
+            if (yEven) curr.y++;
+            curr.x = -curr.x;
+            curr.flip();
+            image_angle += 90;
         }
 
-        if (xEven && !yEven) // eg 2x3 item
-        {
-            if (isClockwise90)
-            {
-                Swap(_x, _y);
-                _y--;
-                _x = -_x;
-            }
-            else
-            {
-                _x = -_x;
-                Swap(_x, _y);
-            }
-            Swap(boundingLenX, boundingLenY);
-        }
-
-        if (!xEven && yEven) // eg 1x2 item
-        {
-            if (isClockwise90)
-            {
-                Swap(_x, _y);
-                _x = -_x;
-            }
-            else
-            {
-                _y++;
-                _x = -_x;
-                Swap(_x, _y);
-            }
-            Swap(boundingLenX, boundingLenY);
-        }
-
-        if (!xEven && !yEven) // eg 3x1 item
-        {
-            if (isClockwise90)
-            {
-                Swap(_x, _y);
-                _x = -_x;
-            }
-            else
-            {
-                _x = -_x;
-                Swap(_x, _y);
-            }
-        }
+        occupiedSquares[i] = curr;
     }
 }
 
 function FlipHrz()
 {
-    if (xEven)
+    // flip the occupied squares in code
+    for (var i = 0; i < size; i++)
     {
-        _x = 1 -_x;
+        var curr = occupiedSquares[i]; // type: Vector2
+
+        if (boundingLenX % 2 == 0)
+        {
+            curr.x = 1 - curr.x;
+        }
+        else
+        {
+            curr.x = -curr.x;
+        }
+
+        occupiedSquares[i] = curr;
+    }
+
+    // flip the sprite
+    if (image_angle % 180 == 0)
+    {
+        image_xscale = -image_xscale;
     }
     else
     {
-        _x = -_x;
+        image_yscale = -image_yscale;
     }
 }
 
