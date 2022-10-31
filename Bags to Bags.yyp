@@ -264,8 +264,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"StartMenu","path":"rooms/StartMenu/StartMenu.yy",},},
     {"roomId":{"name":"testAllBags","path":"rooms/testAllBags/testAllBags.yy",},},
+    {"roomId":{"name":"StartMenu","path":"rooms/StartMenu/StartMenu.yy",},},
     {"roomId":{"name":"testSnap","path":"rooms/testSnap/testSnap.yy",},},
     {"roomId":{"name":"About","path":"rooms/About/About.yy",},},
     {"roomId":{"name":"Help","path":"rooms/Help/Help.yy",},},
@@ -315,6 +315,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trip","folderPath":"folders/Objects/Trip.yy","order":9,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Objects/UI.yy","order":10,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"BodyText","folderPath":"folders/Objects/UI/BodyText.yy","order":14,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Game Controls","folderPath":"folders/Objects/UI/Game Controls.yy","order":19,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Titles","folderPath":"folders/Objects/UI/Titles.yy","order":7,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":10,},
@@ -329,7 +330,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy","order":8,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Game Controls","folderPath":"folders/Objects/UI/Game Controls.yy","order":19,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

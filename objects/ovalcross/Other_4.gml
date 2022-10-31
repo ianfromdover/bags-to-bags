@@ -10,6 +10,6 @@ d = new Vector2(-1, 0);
 e = new Vector2(0, -1);
 
 array_push(occupiedSquares, a, b, c, d, e);
-Init();
+Init(3, 3);
 
 // for some reason, is not working??

@@ -26,14 +26,7 @@ cursorOffsetY = 0;
 // ----- methods -----
 // -------------------
 
-function Init() // (blX, blY)
-{
-    size = array_length(occupiedSquares);
-    boundingLenX = 0; // blX;
-    boundingLenY = 0; // blY;
-}
-
-function InitTest(blX, blY) // TODO: apply these to all the bags
+function Init(blX, blY)
 {
     size = array_length(occupiedSquares);
     boundingLenX = blX;

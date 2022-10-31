@@ -11,4 +11,4 @@ c = new Vector2(0, -1);
 d = new Vector2(1, 1);
 
 array_push(occupiedSquares, a, b, c, d);
-Init();
+Init(2, 3);
