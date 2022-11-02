@@ -4,6 +4,18 @@
 // public vars that must be overwritten in children
 endFn = global.tripManager.OnTripEnd;
 difficultyTime = global.hardTime;
+textOnBar = "PATIENCE";
+timeOverMsg = "I'M LAAAATEEE!";
+endReactionTime = 3;
+isEnded = false;
+
+sprite_idx = 0;
+
+bar_width = 350;
+bar_height = 20;
+
+bar_x = x;
+bar_y = y + 50;
 
 function Init()
 {
@@ -31,6 +43,24 @@ function OnEnd()
 function StopTimer()
 {
 	timeIsRunning = false;
+}
+
+function Scream()
+{
+	if (!isEnded)
+	{
+		textOnBar = "";
+		isEnded = true;
+	}
+	if (timeOverMsg != "")
+	{
+		textOnBar += string_char_at(timeOverMsg, 1);
+		timeOverMsg = string_delete(timeOverMsg, 1, 1);
+	}
+	else
+	{
+		textOnBar += "!";
+	}
 }
 
 Init();

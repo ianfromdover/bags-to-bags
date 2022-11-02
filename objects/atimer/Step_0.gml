@@ -2,12 +2,18 @@
 
 if (timeIsRunning)
 {
-	if (currTime < 0) // time has run out
+	if (currTime < -endReactionTime)
 	{
 		currTime = difficultyTime;
-		displayedTime = 0;
-	
 		OnEnd();
+	}
+	if (currTime < 0) // time has run out
+	{
+		displayedTime = 0;
+		Scream();
+		
+		
+		currTime -= (delta_time / 1000000) // convert microseconds into seconds
 	}
 	else // subtract the time between frames
 	{

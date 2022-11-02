@@ -2,6 +2,7 @@
 
 if (timeIsRunning)
 {
+	
 	if (currTime < 0) // time has run out
 	{
 		currTime = 0;
