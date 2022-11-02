@@ -224,6 +224,8 @@ function RotateR()
     Rotate(true);
 }
 
+// assumption that the center is always at the bottom left of the center is no longer true
+// for even-sided sprites, the bounding box is reframed to an odd number to get the rotation working haha
 function Rotate(isClockwise90) // for this to work, add bounding lengths to every item
     // add the image sprite rotation.
 {

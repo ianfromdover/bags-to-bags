@@ -268,9 +268,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"testAllBags","path":"rooms/testAllBags/testAllBags.yy",},},
     {"roomId":{"name":"StartMenu","path":"rooms/StartMenu/StartMenu.yy",},},
     {"roomId":{"name":"testSnap","path":"rooms/testSnap/testSnap.yy",},},
-    {"roomId":{"name":"testAllBags","path":"rooms/testAllBags/testAllBags.yy",},},
     {"roomId":{"name":"rEASYDUPE","path":"rooms/rEASYDUPE/rEASYDUPE.yy",},},
     {"roomId":{"name":"About","path":"rooms/About/About.yy",},},
     {"roomId":{"name":"Help","path":"rooms/Help/Help.yy",},},
