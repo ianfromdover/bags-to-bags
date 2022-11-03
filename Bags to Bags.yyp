@@ -3,7 +3,7 @@
   "resourceVersion": "1.6",
   "name": "Bags to Bags",
   "resources": [
-    {"id":{"name":"sEndDay2","path":"sprites/sEndDay2/sEndDay2.yy",},"order":9,},
+    {"id":{"name":"sEndDay","path":"sprites/sEndDay/sEndDay.yy",},"order":9,},
     {"id":{"name":"oValCross","path":"objects/oValCross/oValCross.yy",},"order":5,},
     {"id":{"name":"EndOfDay","path":"rooms/EndOfDay/EndOfDay.yy",},"order":26,},
     {"id":{"name":"rHard3","path":"rooms/rHard3/rHard3.yy",},"order":19,},
@@ -180,7 +180,6 @@
     {"id":{"name":"rHard1","path":"rooms/rHard1/rHard1.yy",},"order":12,},
     {"id":{"name":"barFullNoLine","path":"sprites/barFullNoLine/barFullNoLine.yy",},"order":4,},
     {"id":{"name":"sValCrossShiny","path":"sprites/sValCrossShiny/sValCrossShiny.yy",},"order":20,},
-    {"id":{"name":"sEndDay","path":"sprites/sEndDay/sEndDay.yy",},"order":6,},
     {"id":{"name":"oBagTLong","path":"objects/oBagTLong/oBagTLong.yy",},"order":4,},
     {"id":{"name":"sBtnSettings","path":"sprites/sBtnSettings/sBtnSettings.yy",},"order":1,},
     {"id":{"name":"sDetective","path":"sprites/sDetective/sDetective.yy",},"order":0,},
