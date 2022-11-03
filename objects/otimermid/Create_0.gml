@@ -8,6 +8,7 @@ textOnBar = "PATIENCE";
 timeOverMsg = "I'M LAAAATEEE!";
 endReactionTime = 3;
 isEnded = false;
+barTextOffset = 2;
 
 sprite_idx = 0;
 

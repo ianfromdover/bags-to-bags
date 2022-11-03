@@ -9,6 +9,7 @@ textOnBar = "PATIENCE";
 timeOverMsg = "IIIIIIIII'MMMMMMMMM LAAAATEEEEEEEEE!";
 endReactionTime = 3;
 isEnded = false;
+barTextOffset = 2;
 
 bar_width = 350;
 bar_height = 20;

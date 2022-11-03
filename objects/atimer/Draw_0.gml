@@ -1,4 +1,4 @@
-draw_set_font(RobotoMonoTimer);
+draw_set_font(SilomTimer);
 
 
 if (isLastFewSeconds)
@@ -12,7 +12,7 @@ else
 	sprite_idx = 0;
 }
 
-draw_text(x, y, "Time Left: " + string(displayedTime));
+draw_text(x + (bar_width / 2) - 25, y, string(displayedTime)); // 25 is letter px width
 draw_sprite_stretched(sTimerBar, sprite_idx, bar_x, bar_y, 
 min(bar_width, (currTime / difficultyTime) * bar_width), bar_height);
 
@@ -25,4 +25,4 @@ else
 	draw_set_color(c_black);
 }
 draw_set_font(SilomTiny);
-draw_text(bar_x + 1, bar_y + 1, textOnBar);
+draw_text(bar_x + barTextOffset, bar_y + barTextOffset + 1, textOnBar);

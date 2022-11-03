@@ -7,6 +7,7 @@ endReactionTime = 3;
 textOnBar = "PATIENCE";
 timeOverMsg = "I'M TIIIIIIRED!";
 isEnded = false; // CHECK IF SCREAMING IS THE SAME AS IN USUAL ATIMER IN DRAW EVENT
+barTextOffset = 2;
 
 sprite_idx = 0;
 
