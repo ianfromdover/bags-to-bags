@@ -61,6 +61,7 @@ function ForeachSlot(baseSlot, fn) // the function is of the form
 // Drag Start (touchscreen) || Mouse Left Pressed (mouse)
 function OnDragStart(cursor_x, cursor_y)
 {
+    if (global.itemBeingDragged != noone) return;
     UndockSlots();
     isBeingDragged = true;
     global.itemBeingDragged = id;
@@ -216,12 +217,21 @@ function Dock(parentGrid, curr_coords)
 
 function RotateL()
 {
+    image_angle += 90;
     Rotate(false);
 }
 
 function RotateR()
 {
+    image_angle -= 90;
     Rotate(true);
+}
+
+// im sorry that this is such terrible hard code, i had a near-unfeasible deadline
+function isSquareItem()
+{
+	// 2x2 squares, are set to (9, 9) bounding box
+	return boundingLenX == 9 && boundingLenY == 9;
 }
 
 // assumption that the center is always at the bottom left of the center is no longer true
@@ -229,7 +239,10 @@ function RotateR()
 function Rotate(isClockwise90) // for this to work, add bounding lengths to every item
     // add the image sprite rotation.
 {
-    var xEven = boundingLenX % 2 == 0;
+    
+	if (isSquareItem()) return;
+	
+	var xEven = boundingLenX % 2 == 0;
     var yEven = boundingLenY % 2 == 0;
 
     if (xEven != yEven)
@@ -249,14 +262,12 @@ function Rotate(isClockwise90) // for this to work, add bounding lengths to ever
             curr.flip();
             curr.x = -curr.x;
             if (xEven) curr.y--;
-            image_angle -= 90;
         }
         else // anticlockwise
         {
             if (yEven) curr.y++;
             curr.x = -curr.x;
             curr.flip();
-            image_angle += 90;
         }
 
         occupiedSquares[i] = curr;
@@ -265,7 +276,9 @@ function Rotate(isClockwise90) // for this to work, add bounding lengths to ever
 
 function FlipHrz()
 {
-    // flip the occupied squares in code
+    if (isSquareItem()) return;
+	
+	// flip the occupied squares in code
     for (var i = 0; i < size; i++)
     {
         var curr = occupiedSquares[i]; // type: Vector2
