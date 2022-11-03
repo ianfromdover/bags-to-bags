@@ -27,57 +27,73 @@ function Init(diff, numBags)
         case "hard":
             timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerHard);
             break;
-        default: // does this still run everytime?
-            Log("Error: [TripManager: Init] invalid difficulty selected");
     };
 }
 
 function OnTripEnd()
 {
-	// OI!! MOVE ALL THE CALCULATION HERE
 	global.activeTimer.StopTimer();
+
+    // set daytime to what it will be after the trip ends
 	global.tripTimeLeft = global.activeTimer.displayedTime;
 	global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(difficulty) + global.tripTimeLeft;
 	
-    global.cash += CalcMoneyFrmRemainingTime(global.tripTimeLeft, difficulty);
-    global.tripMultiplier = GetDiffMultiplier(difficulty);
-    
-    // TODO: make this responsive to the gameplay
+    // count for EOT screen
+    // count the number of bags
+    // TODO: make this responsive to the bags stolen in gameplay
 	global.reportedIllegal = false; // deterministic. assumes that puzzles that have illegal items have no valuables
     noOfBagsLoaded = global.activeTrunk.itemsContained.getSize();
     global.tripBagsTaken = global.activePersBag.itemsContained.getSize();
     global.tripBagsIncomplete = noOfBags - noOfBagsLoaded - global.tripBagsTaken;
-    global.caught = random(1) < ((1 / 20) * global.tripBagsTaken + 0.4)
+    global.caught = random(1) < ((1 / 20) * global.tripBagsTaken + 0.4);
 
-    // this should be done in the game scene in OnTripEnd
+    // for displayer and calc
+    global.tripBase = GetBase(difficulty);
 
-    global.timeBonus = global.tripTimeLeft * global.tripMultiplier;
+    // money calculation
 
+    global.timeBonus = CalcMoneyFrmRemainingTime(global.tripTimeLeft, difficulty);
     global.unsortedPenalty = global.tripBagsIncomplete * global.incompleteFeePerBag;
 
+    // from stealing
     global.profit = !global.caught && !global.reportedIllegal ? global.tripBagsTaken * global.stealRewardPerBag : 0;
     global.fine = global.caught && !global.reportedIllegal ? global.tripBagsTaken * global.stealCaughtFinePerBag : 0; // positive amt
 
     global.tripTotalAmt = global.tripBase + global.timeBonus + global.profit - global.unsortedPenalty - global.fine;
 
     // update day vars
-    global.dayTotal += global.tripTotalAmt;
+    global.dayTotalAmt += global.tripTotalAmt;
+    global.cash += global.tripTotalAmt; // to show dist to goal in endTrip
+
+    // day vars for debug monitoring
     // global.easyCompleted++; edit by difficulty
     // bonus from this difficulty += timeBonus
+
     global.bagsCaughtStealing += (global.fine != 0) ? global.tripBagsTaken : 0;
     global.dayIncompleteBags += global.tripBagsIncomplete;
-    global.dayTimeLeft -= global.tripTimeLeft; // THIS IS CALLED IN THE DRAW FUNCTION
 
-    isLastTripOfDay = false;
-    if (isLastTripOfDay)
+    if (global.isLastTripOfDay) // TODO: trigger by alien
     {
-        // the end button runs
-        OnDayEnd();
+        OnDayEnd(); // in external script
     }
 	
-    // store stats in global variables
-    // launch the end trip room with those recents.
     room_goto(EndTripScene);
+}
+
+function GetBase(_diff)
+{
+    switch (_diff)
+    {
+        case "easy":
+            return global.easy_base;
+            break;
+        case "mid":
+            return global.mid_base;
+            break;
+        case "hard":
+            return global.hard_base;
+            break;
+    };
 }
 
 function GetLevelMaxTime(_diff)
@@ -98,36 +114,21 @@ function GetLevelMaxTime(_diff)
     };
 }
 
-function GetDiffMultiplier(_diff)
-{
-    switch (_diff)
-    {
-        case "easy":
-            return global.easy_multiplier;
-            break;
-        case "mid":
-            return global.mid_multiplier;
-            break;
-        case "hard":
-            return global.hard_multiplier;
-            break;
-        default:
-            Log("Error: [TripManager: CalcMoneyFrmRemainingTime] invalid difficulty selected");
-    };
-}
-
 function CalcMoneyFrmRemainingTime(_t, _diff) // _t time is a float
 {
 
     switch (_diff)
     {
         case "easy":
+            global.tripMultiplier = global.easy_multiplier;
             return ceil(_t) * global.easy_multiplier;
             break;
         case "mid":
+            global.tripMultiplier = global.mid_multiplier;
             return ceil(_t) * global.mid_multiplier;
             break;
         case "hard":
+            global.tripMultiplier = global.hard_multiplier;
             return ceil(_t) * global.hard_multiplier;
             break;
         default:

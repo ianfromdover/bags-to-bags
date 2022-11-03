@@ -14,16 +14,23 @@ global.activeTimer = noone;
 // -- GAME VARS --
 // ---------------
 
-global.cash = 0;		// int
+global.cash = 0;		  // int
+global.day = 1;           // int, [1, 2, 3]
 
 // --------------
 // -- DAY VARS --
 // --------------
 
-global.day = 1;           // int, [1, 2, 3]
 global.dayTimeLeft = 300; // float, secs
-global.dayTotal = 0;
 
+// cash
+global.dayTotalAmt = 0;
+global.dayTotalBaseAmt = 0;
+global.dayTotalTimeBonusAmt = 0;
+global.dayTotalStealAmt = 0;
+global.dayTotalFines = 0;
+
+// currently unused, wanted to be for balancing
 global.bonusFromEasy = 0;
 global.bonusFromMid = 0;
 global.bonusFromHard = 0;
@@ -35,6 +42,7 @@ global.hardCompleted = 0;
 global.bagsCaughtStealing = 0;
 global.dayIncompleteBags = 0;
 global.aliensServed = 0;
+global.isLastTripOfDay = false;
 
 // --------------------
 // -- TRIP INSTANCES --
@@ -49,16 +57,20 @@ global.itemBeingDragged = noone;
 // -- TRIP TEMP VARS --
 // --------------------
 
-global.tripBase = 70;               // edited
-global.tripTimeLeft = 11;
+// for endtripmoney
+global.tripBase = 70;
 global.tripMultiplier = 1;
-global.tripBagsIncomplete = 1;
-global.tripBagsTaken = 1;
-global.tripTotal = 0;
+global.tripTimeLeft = 11;
+global.timeBonus = 11;
+
+global.tripBagsIncomplete = 0;
+global.tripBagsTaken = 0;
+
 global.reportedIllegal = false;
 global.caught = false; 
 global.profit = 0;
 global.fine = 0;
+global.unsortedPenalty = 0;
 global.tripTotalAmt = 0; 
 
 // ---------------
@@ -93,6 +105,11 @@ global.incompleteFeePerBag = 30;
 global.stealRewardPerBag = 100;
 global.stealCaughtFinePerBag = 100;
 // no reward for reporting illegal goods -> just feel good about yourself
+
+    // goal / milestone
+global.goal1 = 2000;
+global.goal2 = 5000;
+global.goal3 = 10000;
 
 global.stealChance1 = 0.45;
 global.stealChance2 = 0.5;

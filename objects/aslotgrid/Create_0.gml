@@ -130,5 +130,4 @@ function Destroy()
     {
         for (var j = 0; j < height; j++) slots[i][j].Destroy();
     }
-    // TODO: destroy self
 }

@@ -50,8 +50,8 @@ msg = "BASE       +" + string(global.tripBase) + line
 	+ caughtMsg
 	+ line
 	+ "--------------" + line
-	+ "TOTAL      " + total + line;
-    // should we tell them how much $ until the next milestone?
+	+ "TOTAL      " + total + line
+	+ "NEXT GOAL  " + string(AmountToNextGoal(global.cash));
 
 draw_text(x, y, msg);
 

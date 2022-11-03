@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Timer",
+  "name": "AmountToNextGoal",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

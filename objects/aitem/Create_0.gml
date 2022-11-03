@@ -178,7 +178,6 @@ function OnDragEnd()
         }
 
         // move the item to the slot
-        // TODO: bug: need to include the offset to the center! for items whose center is on a line.
         x = slot_x;
         y = slot_y;
     }
