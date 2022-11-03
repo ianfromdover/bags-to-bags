@@ -1,2 +1,2 @@
 /// @description Start the Game
-this = new UiButtonOneArg(room_goto, TripPackingScene);
+this = new UiButtonOneArg(room_goto, rEasy1);

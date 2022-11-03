@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBagTLong",
+  "name": "oBtnSubmitFlipped",
   "spriteId": {
-    "name": "sBagTLong",
-    "path": "sprites/sBagTLong/sBagTLong.yy",
+    "name": "sSubmitFlipped",
+    "path": "sprites/sSubmitFlipped/sSubmitFlipped.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "aItem",
-    "path": "objects/aItem/aItem.yy",
+    "name": "aUIButton",
+    "path": "objects/aUIButton/aUIButton.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,12 +28,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":6,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "name": "Game Controls",
+    "path": "folders/Objects/UI/Game Controls.yy",
   },
 }

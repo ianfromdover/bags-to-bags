@@ -12,7 +12,7 @@ else
 	sprite_idx = 0;
 }
 
-draw_text(x + (bar_width / 2) - 25, y, string(displayedTime)); // 25 is letter px width
+draw_text(x + (bar_width / 2) - 35, y, string(displayedTime)); // 25 is letter px width
 draw_sprite_stretched(sTimerBar, sprite_idx, bar_x, bar_y, 
 min(bar_width, (currTime / difficultyTime) * bar_width), bar_height);
 

@@ -1,8 +1,8 @@
 // oTripManager.
 difficulty = "easy";
 noOfBags = 5;
-timerPosX = 75; // pixels
-timerPosY = 60; // pixels
+timerPosX = 520; // pixels
+timerPosY = 145; // pixels
 
 // global.activeTimer; // get the remaining time from this. it will call onSubmit.
 global.tripManager = id;
