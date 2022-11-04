@@ -1,2 +1,2 @@
-/// @description listen for A
-if (keyboard_check_pressed(ord("A"))) this.OnClick();
+/// @description listen for D
+if (keyboard_check_pressed(ord("D"))) this.OnClick();
