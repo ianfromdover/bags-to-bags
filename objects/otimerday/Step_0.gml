@@ -3,12 +3,16 @@
 if (timeIsRunning)
 {
 	
+	if (currTime < -endReactionTime)
+	{
+		currTime = difficultyTime;
+		OnEnd();
+	}
 	if (currTime < 0) // time has run out
 	{
-		currTime = 0;
 		displayedTime = 0;
-	
-		OnEnd();
+		Scream();
+		currTime -= (delta_time / 1000000);
 	}
 	else // subtract the time between frames
 	{

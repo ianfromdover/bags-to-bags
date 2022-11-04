@@ -45,7 +45,7 @@ function OnTripEnd()
     noOfBagsLoaded = global.activeTrunk.itemsContained.getSize();
     global.tripBagsTaken = global.activePersBag.itemsContained.getSize();
     global.tripBagsIncomplete = noOfBags - noOfBagsLoaded - global.tripBagsTaken;
-    global.caught = random(1) < ((1 / 20) * global.tripBagsTaken + 0.4);
+    global.caught = global.StealChance(global.tripBagsTaken);
 
     // for displayer and calc
     global.tripBase = GetBase(difficulty);

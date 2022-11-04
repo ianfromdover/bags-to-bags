@@ -1,5 +1,9 @@
 /// @description All of the global variables
 
+global.AddCash = function()
+{
+    global.cash += 500;
+}
 // -----------------------
 // -- MANAGER INSTANCES --
 // -----------------------
@@ -15,7 +19,7 @@ global.activeTimer = noone;
 // ---------------
 
 global.cash = 0;		  // int
-global.day = 1;           // int, [1, 2, 3]
+global.day = 0;           // int, [0, 1, 2, 3]
 
 // --------------
 // -- DAY VARS --
@@ -58,10 +62,10 @@ global.itemBeingDragged = noone;
 // --------------------
 
 // for endtripmoney
-global.tripBase = 70;
+global.tripBase = 70; // will be overwritten by tripmanager
 global.tripMultiplier = 1;
-global.tripTimeLeft = 11;
-global.timeBonus = 11;
+global.tripTimeLeft = 0;
+global.timeBonus = 0;
 
 global.tripBagsIncomplete = 0;
 global.tripBagsTaken = 0;
@@ -84,7 +88,6 @@ global.maxDayTime = 300;
 global.easyTime = 60;
 global.midTime = 90;
 global.hardTime = 120;
-global.dayTimeMax = 300;
 
 global.day2TimeReduction = 10;
 global.day3TimeReduction = 15;
@@ -111,9 +114,15 @@ global.goal1 = 2000;
 global.goal2 = 5000;
 global.goal3 = 10000;
 
+global.StealChance = function(numBags)
+{
+    return random(1) < ((1 / 20) * numBags + 0.4);
+}
+/*
 global.stealChance1 = 0.45;
 global.stealChance2 = 0.5;
 global.stealChance3 = 0.55;
 global.stealChance4 = 0.6;
 global.stealChance5 = 0.65;
+*/
 

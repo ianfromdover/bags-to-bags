@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBtnDebugTripPack",
+  "name": "oBtnTestScene",
   "spriteId": {
     "name": "sBagW",
     "path": "sprites/sBagW/sBagW.yy",

@@ -32,7 +32,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1B655C18_2_1","properties":[],"isDnd":false,"objectId":{"name":"oPersonalBag","path":"objects/oPersonalBag/oPersonalBag.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_1B655C18","path":"rooms/ParentTrip/ParentTrip.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":15.0,"y":64.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"UI","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6C4DF957_2_1","properties":[],"isDnd":false,"objectId":null,"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_274A0B9C","properties":[],"isDnd":false,"objectId":{"name":"TMM8","path":"objects/TMM8/TMM8.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":32.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23DF65B8","properties":[],"isDnd":false,"objectId":{"name":"oBtnFlip","path":"objects/oBtnFlip/oBtnFlip.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_23DF65B8","path":"rooms/ParentTrip/ParentTrip.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":640.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1E75442","properties":[],"isDnd":false,"objectId":{"name":"oBtnRotateR","path":"objects/oBtnRotateR/oBtnRotateR.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_1E75442","path":"rooms/ParentTrip/ParentTrip.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":640.0,},
@@ -49,7 +48,6 @@
   "instanceCreationOrder": [
     {"name":"inst_41B4B700_2_1","path":"rooms/rMid8/rMid8.yy",},
     {"name":"inst_1B655C18_2_1","path":"rooms/rMid8/rMid8.yy",},
-    {"name":"inst_6C4DF957_2_1","path":"rooms/rMid8/rMid8.yy",},
     {"name":"inst_47205EF8_1_1","path":"rooms/rMid8/rMid8.yy",},
     {"name":"inst_5BD2A4B5","path":"rooms/rMid8/rMid8.yy",},
     {"name":"inst_33739A0C","path":"rooms/rMid8/rMid8.yy",},

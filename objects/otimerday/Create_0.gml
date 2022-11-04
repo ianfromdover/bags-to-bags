@@ -1,12 +1,13 @@
 /// @description Initialise Timer fn.
 
 displayedTime = global.dayTimeLeft; // overridden in room start
+difficultyTime = global.maxDayTime;
 timeIsRunning = true;
 isLastFewSeconds = false;
 endReactionTime = 3;
-textOnBar = "PATIENCE";
+textOnBar = "TIME LEFT";
 timeOverMsg = "I'M TIIIIIIRED!";
-isEnded = false; // CHECK IF SCREAMING IS THE SAME AS IN USUAL ATIMER IN DRAW EVENT
+isEnded = false;
 barTextOffset = 2;
 
 sprite_idx = 0;
@@ -17,9 +18,10 @@ bar_height = 20;
 bar_x = x;
 bar_y = y + 50;
 
-function Init()
+function Init() // need to call when room starts.
 {
 	global.activeTimer = id;
+	timeIsRunning = true;
 	
 	if (displayedTime > global.dayTimeLeft)
 	{
@@ -31,7 +33,6 @@ function Init()
 
 function OnEnd()
 {
-    // tell the player that "time has ended" to give them time to react
 	OnDayEnd();
 }
 
@@ -48,7 +49,7 @@ function RestartTimer() // resume button
 
 function Scream()
 {
-	if (!isEnded)
+	if (!isEnded) // one-time flag
 	{
 		textOnBar = "";
 		isEnded = true;
