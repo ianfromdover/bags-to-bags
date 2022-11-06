@@ -28,8 +28,8 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60229f74-4779-4b74-8055-3c8e6f6b7478",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4407d383-a5a1-4417-a758-5cd9116133b4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60229f74-4779-4b74-8055-3c8e6f6b7478",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -46,8 +46,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1c948962-025f-48da-8b8c-fe1cf7e6e5e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60229f74-4779-4b74-8055-3c8e6f6b7478","path":"sprites/sSubmitFlipped/sSubmitFlipped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"fae518a9-f668-4b09-b6b0-5fba3f34eab7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4407d383-a5a1-4417-a758-5cd9116133b4","path":"sprites/sSubmitFlipped/sSubmitFlipped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fae518a9-f668-4b09-b6b0-5fba3f34eab7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4407d383-a5a1-4417-a758-5cd9116133b4","path":"sprites/sSubmitFlipped/sSubmitFlipped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1c948962-025f-48da-8b8c-fe1cf7e6e5e8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60229f74-4779-4b74-8055-3c8e6f6b7478","path":"sprites/sSubmitFlipped/sSubmitFlipped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
