@@ -28,6 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c8f8b23-f50f-4a8e-a077-cdc0af2c8b04",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e33c4c08-5457-4ffc-bb0c-799f4113dcf2",},
   ],
   "sequence": {
@@ -40,12 +41,13 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"083315f2-0d34-4f54-b9fe-cb0f5a4be44f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e33c4c08-5457-4ffc-bb0c-799f4113dcf2","path":"sprites/sBtnPlayAgain/sBtnPlayAgain.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ba4c2323-ed45-4881-8b85-67c03e60d31d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c8f8b23-f50f-4a8e-a077-cdc0af2c8b04","path":"sprites/sBtnPlayAgain/sBtnPlayAgain.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"083315f2-0d34-4f54-b9fe-cb0f5a4be44f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e33c4c08-5457-4ffc-bb0c-799f4113dcf2","path":"sprites/sBtnPlayAgain/sBtnPlayAgain.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

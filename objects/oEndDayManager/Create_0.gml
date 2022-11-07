@@ -9,9 +9,3 @@ function EndTripManager() constructor
 		// okai
 	}
 }
-
-function OnPlayerSleep()
-{
-	global.day++;
-	room_goto(StartOfDay);
-}

@@ -19,7 +19,7 @@ global.activeTimer = noone;
 // ---------------
 
 global.cash = 0;		  // int
-global.day = 0;           // int, [0, 1, 2, 3]
+global.day = 3;           // int, [1, 2, 3]
 
 // --------------
 // -- DAY VARS --

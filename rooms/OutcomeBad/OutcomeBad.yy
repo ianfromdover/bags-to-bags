@@ -1,0 +1,60 @@
+{
+  "resourceType": "GMRoom",
+  "resourceVersion": "1.0",
+  "name": "OutcomeBad",
+  "isDnd": false,
+  "volume": 1.0,
+  "parentRoom": {
+    "name": "OutcomeParent",
+    "path": "rooms/OutcomeParent/OutcomeParent.yy",
+  },
+  "views": [
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":true,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+  ],
+  "layers": [
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"UI","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2CC452C0_1_1","properties":[],"isDnd":false,"objectId":{"name":"oBtnPlayAgain","path":"objects/oBtnPlayAgain/oBtnPlayAgain.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_2CC452C0","path":"rooms/OutcomeParent/OutcomeParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":1056.0,"y":608.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_685BC06B","properties":[],"isDnd":false,"objectId":{"name":"oFinalMoney","path":"objects/oFinalMoney/oFinalMoney.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_685BC06B","path":"rooms/OutcomeParent/OutcomeParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":1088.0,"y":544.0,},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":{"name":"endingBad","path":"sprites/endingBad/endingBad.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+  ],
+  "inheritLayers": true,
+  "creationCodeFile": "",
+  "inheritCode": true,
+  "instanceCreationOrder": [
+    {"name":"inst_2CC452C0_1_1","path":"rooms/OutcomeBad/OutcomeBad.yy",},
+    {"name":"inst_685BC06B","path":"rooms/OutcomeBad/OutcomeBad.yy",},
+  ],
+  "inheritCreationOrder": true,
+  "sequenceId": null,
+  "roomSettings": {
+    "inheritRoomSettings": true,
+    "Width": 1366,
+    "Height": 768,
+    "persistent": false,
+  },
+  "viewSettings": {
+    "inheritViewSettings": true,
+    "enableViews": false,
+    "clearViewBackground": false,
+    "clearDisplayBuffer": true,
+  },
+  "physicsSettings": {
+    "inheritPhysicsSettings": true,
+    "PhysicsWorld": false,
+    "PhysicsWorldGravityX": 0.0,
+    "PhysicsWorldGravityY": 10.0,
+    "PhysicsWorldPixToMetres": 0.1,
+  },
+  "parent": {
+    "name": "Rooms",
+    "path": "folders/Rooms.yy",
+  },
+}

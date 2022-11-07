@@ -22,7 +22,7 @@ if (timeIsRunning)
 	}
 }
 
-if (displayedTime == 15)
+if (displayedTime < 15)
 {
 	isLastFewSeconds = true;
 }
