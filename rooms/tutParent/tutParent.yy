@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "ParentTutoral",
+  "name": "tutParent",
   "isDnd": false,
   "volume": 1.0,
   "parentRoom": null,
@@ -27,7 +27,7 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_4963888D","path":"rooms/ParentTutoral/ParentTutoral.yy",},
+    {"name":"inst_4963888D","path":"rooms/tutParent/tutParent.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
