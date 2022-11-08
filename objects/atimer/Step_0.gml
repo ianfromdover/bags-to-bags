@@ -9,20 +9,27 @@ if (timeIsRunning)
 	}
 	if (currTime < 0) // time has run out
 	{
-		displayedTime = 0;
+		if (!less0Flag)
+		{
+			displayedTime = 0;
+			less0Flag = true;
+		}
+		
+		audio_play_sound(TimeOver, 10, 0);
 		Scream();
-		
-		
 		currTime -= (delta_time / 1000000) // convert microseconds into seconds
 	}
 	else // subtract the time between frames
 	{
 		currTime -= (delta_time / 1000000) // convert microseconds into seconds
-		displayedTime = ceil(currTime); // round up to nearest int
+		newDisplayedTime = ceil(currTime); // round up to nearest int
+		if (less15Flag && newDisplayedTime != displayedTime) audio_play_sound(TimeWarn, 10, 0);
+		displayedTime = newDisplayedTime;
 	}
 }
 
-if (displayedTime < 15)
+if (!less15Flag && displayedTime <= 15)
 {
-	isLastFewSeconds = true;
+	less15Flag = true;
+	audio_play_sound(TimeWarn, 10, 0);
 }

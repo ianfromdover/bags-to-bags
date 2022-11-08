@@ -1,7 +1,7 @@
 draw_set_font(SilomTimer);
 
 
-if (isLastFewSeconds)
+if (less15Flag)
 {
 	 draw_set_color(c_red);
 	 sprite_idx = 1;
@@ -16,7 +16,7 @@ draw_text(x + (bar_width / 2) - 35, y, string(displayedTime)); // 25 is letter p
 draw_sprite_stretched(sTimerBar, sprite_idx, bar_x, bar_y, 
 min(bar_width, (currTime / difficultyTime) * bar_width), bar_height);
 
-if (isLastFewSeconds)
+if (less15Flag)
 {
 	 draw_set_color(c_white);
 }

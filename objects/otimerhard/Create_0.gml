@@ -21,7 +21,8 @@ bar_y = y + 50;
 function Init()
 {
 	global.activeTimer = id;
-	isLastFewSeconds = false;
+	less15Flag = false;
+	less0Flag = false;
 	timeIsRunning = true;
 	
 	if (difficultyTime > global.dayTimeLeft)

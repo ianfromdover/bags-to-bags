@@ -2,8 +2,6 @@
 
 displayedTime = global.dayTimeLeft; // overridden in room start
 difficultyTime = global.maxDayTime;
-timeIsRunning = true;
-isLastFewSeconds = false;
 endReactionTime = 3;
 textOnBar = "TIME LEFT";
 timeOverMsg = "I'M TIIIIIIRED!";
@@ -21,6 +19,8 @@ bar_y = y + 50;
 function Init() // need to call when room starts.
 {
 	global.activeTimer = id;
+	less15Flag = false;
+	less0Flag = false;
 	timeIsRunning = true;
 	
 	if (displayedTime > global.dayTimeLeft)

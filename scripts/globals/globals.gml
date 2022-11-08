@@ -85,7 +85,7 @@ global.maxDayTime = 300;
 
 // easy, mid, hard room value settings
     // timing in seconds
-global.easyTime = 60;
+global.easyTime = 17; //60
 global.midTime = 90;
 global.hardTime = 120;
 

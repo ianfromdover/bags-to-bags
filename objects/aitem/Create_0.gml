@@ -180,6 +180,7 @@ function OnDragEnd()
         // move the item to the slot
         x = slot_x;
         y = slot_y;
+		audio_play_sound(DropBag, 10, 0);
     }
     else 
     {

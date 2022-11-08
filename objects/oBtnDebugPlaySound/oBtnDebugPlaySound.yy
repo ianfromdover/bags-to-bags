@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBtnDebugAddCash",
+  "name": "oBtnDebugPlaySound",
   "spriteId": {
     "name": "sBagSnakeS",
     "path": "sprites/sBagSnakeS/sBagSnakeS.yy",
