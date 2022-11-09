@@ -13,8 +13,6 @@ total = (global.tripTotalAmt < 0 ? "" : "+") + string(global.tripTotalAmt);
 // -- DISPLAY --
 // -------------
 
-// use string() to turn Reals into strings.
-
 line = "\n";
 reportIllegMsg = global.reportedIllegal 
 	? "You reported an illegal item! The space police " + line

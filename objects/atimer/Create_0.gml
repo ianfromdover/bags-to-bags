@@ -6,7 +6,7 @@ endFn = global.tripManager.OnTripEnd;
 difficultyTime = global.easyTime;
 sprite_idx = 0;
 textOnBar = "PATIENCE";
-timeOverMsg = "IIIIIIIII'MMMMMMMMM LAAAATEEEEEEEEE!";
+timeOverMsg = "IIIIIIIII'MMMMMMMMM LAAAATEEEEEEEEE!!!!!!!!!!!!!!!!!!!!";
 endReactionTime = 3;
 isEnded = false;
 barTextOffset = 2;
@@ -61,7 +61,7 @@ function Scream()
 	}
 	else
 	{
-		textOnBar += "!";
+		// textOnBar += "!"; // makes text exceed screen, abit messy.
 	}
 }
 

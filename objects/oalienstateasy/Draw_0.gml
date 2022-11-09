@@ -1,10 +1,11 @@
-draw_set_font(RobotoMono);
-draw_set_color(c_black);
+draw_set_font(SilomBody);
+draw_set_color(#5DF542);
 
 line = "\n";
 
-msg = string(global.easyTime) + "s" + line
-	+ "$" + string(global.easy_base) + line
-	+ "BONUS " + string(global.easy_multiplier) + "x";
+msg = "EASY" + line
+	+ "Base Fare: " + string(global.easy_base) + line
+	+ "Time Bonus: " + line
+	+ "$B" + string(global.easy_multiplier) + " / 1s remaining";
 
 draw_text(x, y, msg);
