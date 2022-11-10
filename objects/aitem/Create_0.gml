@@ -116,7 +116,7 @@ function HoverCheck()
     // if the piece is not on a grid
     if (is_undefined(nearestSlot))
     {
-        // for ending drag
+        // stop checking
         allAvail = false;
         nearestSlot = noone;
         return;
@@ -201,11 +201,6 @@ function OnDragEnd()
         y = prevPxPosOfOrigin.y;
          */
     }
-    // stretch goal for UI: dock to nearest avail place, then back to original when nearest got no space. 
-    // for that: new fn
-    // if nearestList[| 0] not allAvail, repeat with nearestList[| 1].
-    // if that is not allAvail, repeat with [| 2] and [| 3].
-    // if [| 3] is also not allAvail, show the [| 1] outline being unavail
 }
 
 function Dock(parentGrid, curr_coords)
@@ -217,13 +212,11 @@ function Dock(parentGrid, curr_coords)
 
 function RotateL()
 {
-    image_angle += 90;
     Rotate(false);
 }
 
 function RotateR()
 {
-    image_angle -= 90;
     Rotate(true);
 }
 
@@ -234,13 +227,20 @@ function isSquareItem()
 	return boundingLenX == 9 && boundingLenY == 9;
 }
 
-// assumption that the center is always at the bottom left of the center is no longer true
-// for even-sided sprites, the bounding box is reframed to an odd number to get the rotation working haha
-function Rotate(isClockwise90) // for this to work, add bounding lengths to every item
-    // add the image sprite rotation.
+// for even-sided sprites, the bounding box is reframed to an odd number such that rotation works
+function Rotate(isClockwise90)
 {
     
 	if (isSquareItem()) return;
+	
+	if (isClockwise90)
+	{
+		image_angle -= 90;
+	}
+	else
+	{
+		image_angle += 90;
+	}
 	
 	var xEven = boundingLenX % 2 == 0;
     var yEven = boundingLenY % 2 == 0;
@@ -253,6 +253,7 @@ function Rotate(isClockwise90) // for this to work, add bounding lengths to ever
         boundingLenY = temp;
     }
 
+	// rotate the grid squares that the piece occupies in code
     for (var i = 0; i < size; i++)
     {
         var curr = occupiedSquares[i]; // type: Vector2

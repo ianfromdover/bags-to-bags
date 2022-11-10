@@ -21,7 +21,7 @@ function Init(isTrunk) // create slots
     // assumption: if it is not a trunk, it is a personal bag
 
     // pos of temp slot being initialised
-    slPosX = (slotPxLen / 2) + x; // first slot at (0, 0) btm left of grid
+    slPosX = (slotPxLen / 2) + x; // first slot at (0, 0) top left of grid
     slPosY = (slotPxLen / 2) + y;
 
     for (var i = 0; i < width; i++)
@@ -31,17 +31,17 @@ function Init(isTrunk) // create slots
         for (var j = 0; j < height; j++)
         {
             // create slot and instantiate my code logic
-            var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot); // yes
+            var inst = instance_create_layer(slPosX, slPosY, "Slots", oSlot);
             with (inst)
             {
-                parentGrid = other;
-                coords = new Vector2(i, j); // (0, 0) btm left corner
+                parentGrid = other; // this grid
+                coords = new Vector2(i, j); // (0, 0) top left corner
             }
 
             // put into array
             slots[i][j] = inst;
 
-            // spawn the next slot above
+            // spawn the next slot below
             slPosY += slotPxLen;
         }
 
@@ -114,8 +114,7 @@ function UndockSlot(_slot_coords)
     slots[_slot_coords.x][_slot_coords.y].Undock();
 }
 
-// store and take out of the grid, add to itemlist
-
+// Set all the colours of the grid to default
 function SetAllColDef()
 {
     for (var i = 0; i < width; i++)
