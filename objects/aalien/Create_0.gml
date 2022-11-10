@@ -1,3 +1,3 @@
 /// @description Overwrite fn in child
-
-this = new UiButtonOneArg(LaunchRandomRoom, "easy");
+difficulty = "easy"
+this = new UiButtonOneArg(LaunchRandomRoom, difficulty);

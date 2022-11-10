@@ -4,7 +4,7 @@ displayedTime = global.dayTimeLeft; // overridden in room start
 difficultyTime = global.maxDayTime;
 endReactionTime = 3;
 textOnBar = "TIME LEFT";
-timeOverMsg = "I'M TIIIIIIRED!";
+timeOverMsg = "I'M TIIIIIIIIIRED!!!!!!!!!!!!!!!!!";
 isEnded = false;
 barTextOffset = 2;
 
@@ -22,17 +22,12 @@ function Init() // need to call when room starts.
 	less15Flag = false;
 	less0Flag = false;
 	timeIsRunning = true;
-	
-	if (displayedTime > global.dayTimeLeft)
-	{
-		displayedTime = global.dayTimeLeft;
-	}
-	
 	currTime = displayedTime;
 }
 
 function OnEnd()
 {
+    timeIsRunning = false;
 	OnDayEnd();
 }
 
@@ -41,26 +36,26 @@ function StopTimer() // called by the pause button
 	timeIsRunning = false;
 }
 
-function RestartTimer() // resume button
+function ResumeTimer()
 {
 	timeIsRunning = true;
 }
 
-
 function Scream()
 {
-	if (!isEnded) // one-time flag
+	if (!isEnded) // once the time reaches 0
 	{
 		textOnBar = "";
 		isEnded = true;
 	}
-	if (timeOverMsg != "")
+	if (timeOverMsg != "") // when there are things to add to the text
 	{
 		textOnBar += string_char_at(timeOverMsg, 1);
 		timeOverMsg = string_delete(timeOverMsg, 1, 1);
+		audio_play_sound(TimeOver, 10, 0);
 	}
-	else
+	else // when the text runs out
 	{
-		textOnBar += "!";
+		// textOnBar += "!"; // makes text exceed screen, abit messy.
 	}
 }

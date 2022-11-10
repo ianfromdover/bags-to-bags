@@ -1,4 +1,4 @@
-draw_set_font(SilomTimer);
+draw_set_font(SilomBody);
 draw_set_color(#5DF542);
 
 // -------------

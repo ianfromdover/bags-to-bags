@@ -77,12 +77,7 @@ function OnTripEnd()
     global.dayTotalStealAmt += global.profit;
     global.dayTotalFines += global.fine;
 
-    if (global.isLastTripOfDay) // triggered by packing scene's timer
-    {
-        OnDayEnd(); // in script
-    }
-	
-    room_goto(EndTripScene);
+	room_goto(EndTripScene);
 }
 
 function UpdateDayBonus(bonus)

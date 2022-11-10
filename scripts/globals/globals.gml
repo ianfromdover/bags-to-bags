@@ -1,17 +1,11 @@
 /// @description All of the global variables
 
-global.AddCash = function()
-{
-    global.cash += 500;
-}
 // -----------------------
 // -- MANAGER INSTANCES --
 // -----------------------
 
 global.tripManager = noone; // set at each room
-// problem with room-based: just need to bind the references in the Room Start event instead of the Create
-// global.endTripManager = new EndTripManager();
-// global.pickupManager = new PickupManager();
+global.pickupManager = noone;
 global.activeTimer = noone;
 
 // ---------------
@@ -19,13 +13,13 @@ global.activeTimer = noone;
 // ---------------
 
 global.cash = 0;		  // int
-global.day = 3;           // int, [1, 2, 3]
+global.day = 1;           // int, [1, 2, 3]
 
 // --------------
 // -- DAY VARS --
 // --------------
 
-global.dayTimeLeft = 55; // 300 float, secs
+global.dayTimeLeft = 300; // float, secs
 
 // cash
 global.dayTotalAmt = 0;
@@ -81,7 +75,7 @@ global.tripTotalAmt = 0;
 // -- CONSTANTS --
 // ---------------
 
-global.maxDayTime = 55; // 300
+global.maxDayTime = 300;
 
 // easy, mid, hard room value settings
     // timing in seconds

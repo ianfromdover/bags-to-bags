@@ -16,7 +16,6 @@ if (timeIsRunning)
 			less0Flag = true;
 		}
 		
-		audio_play_sound(TimeOver, 10, 0);
 		Scream();
 		currTime -= (delta_time / 1000000) // convert microseconds into seconds
 	}

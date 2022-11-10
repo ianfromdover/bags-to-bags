@@ -1,2 +1,2 @@
-/// @description Launches hard rooms
-this = new UiButtonOneArg(LaunchRandomRoom, "hard");
+difficulty = "hard"
+this = new UiButtonOneArg(LaunchRandomRoom, difficulty);

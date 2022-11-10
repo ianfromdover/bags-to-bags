@@ -1,3 +1,2 @@
-/// @description Launches Medium Rooms
-
-this = new UiButtonOneArg(LaunchRandomRoom, "mid");
+difficulty = "hard"
+this = new UiButtonOneArg(LaunchRandomRoom, difficulty);

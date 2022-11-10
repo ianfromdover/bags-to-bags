@@ -6,7 +6,7 @@ endFn = global.tripManager.OnTripEnd;
 difficultyTime = global.easyTime;
 sprite_idx = 0;
 textOnBar = "PATIENCE";
-timeOverMsg = "IIIIIIIII'MMMMMMMMM LAAAATEEEEEEEEE!!!!!!!!!!!!!!!!!!!!";
+timeOverMsg = "IIIIIIIII'MMMMMMMMM LAAAATEEEEEEEEE!!!!!!!!!!!";
 endReactionTime = 3;
 isEnded = false;
 barTextOffset = 2;
@@ -17,11 +17,15 @@ bar_height = 20;
 bar_x = x;
 bar_y = y + 50;
 
-lastTripX = 630;
-lastTripY = 20;
+lastTripX = 485;
+lastTripY = 680;
 
-function Init()
+function Init() // if changed, need to copy paste into children
 {
+    // reduce time depending on day
+    if (global.day == 2) difficultyTime -= global.day2TimeReduction;
+    if (global.day == 3) difficultyTime -= global.day3TimeReduction;
+
 	if (difficultyTime > global.dayTimeLeft)
 	{
 		global.isLastTripOfDay = true;
@@ -47,19 +51,26 @@ function StopTimer()
 	timeIsRunning = false;
 }
 
+function ResumeTimer()
+{
+	timeIsRunning = true;
+}
+
+
 function Scream()
 {
-	if (!isEnded)
+	if (!isEnded) // once the time reaches 0
 	{
 		textOnBar = "";
 		isEnded = true;
 	}
-	if (timeOverMsg != "")
+	if (timeOverMsg != "") // when there are things to add to the text
 	{
 		textOnBar += string_char_at(timeOverMsg, 1);
 		timeOverMsg = string_delete(timeOverMsg, 1, 1);
+		audio_play_sound(TimeOver, 10, 0);
 	}
-	else
+	else // when the text runs out
 	{
 		// textOnBar += "!"; // makes text exceed screen, abit messy.
 	}

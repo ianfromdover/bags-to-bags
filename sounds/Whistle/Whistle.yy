@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Whistle.wav",
-  "duration": 0.401875,
+  "duration": 0.171563,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
