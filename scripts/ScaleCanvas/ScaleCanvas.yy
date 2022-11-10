@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ResizeWindow",
+  "name": "ScaleCanvas",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
