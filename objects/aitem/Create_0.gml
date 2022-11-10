@@ -65,6 +65,7 @@ function OnDragStart(cursor_x, cursor_y)
     UndockSlots();
     isBeingDragged = true;
     global.itemBeingDragged = id;
+	audio_play_sound(Rotate, 10, 0);
 
     // save cursor offset
     cursorOffsetX = x - cursor_x;
@@ -241,6 +242,7 @@ function Rotate(isClockwise90)
 	{
 		image_angle += 90;
 	}
+	audio_play_sound(Rotate, 10, 0);
 	
 	var xEven = boundingLenX % 2 == 0;
     var yEven = boundingLenY % 2 == 0;
@@ -305,5 +307,6 @@ function FlipHrz()
     {
         image_yscale = -image_yscale;
     }
+	audio_play_sound(Rotate, 10, 0);
 }
 

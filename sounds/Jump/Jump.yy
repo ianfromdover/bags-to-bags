@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "Powerup",
+  "name": "Jump",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,7 +14,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Powerup.wav",
+  "soundFile": "Jump.wav",
   "duration": 0.30678,
   "parent": {
     "name": "Sounds",
