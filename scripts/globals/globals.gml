@@ -25,7 +25,7 @@ global.day = 3;           // int, [1, 2, 3]
 // -- DAY VARS --
 // --------------
 
-global.dayTimeLeft = 300; // float, secs
+global.dayTimeLeft = 55; // 300 float, secs
 
 // cash
 global.dayTotalAmt = 0;
@@ -81,7 +81,7 @@ global.tripTotalAmt = 0;
 // -- CONSTANTS --
 // ---------------
 
-global.maxDayTime = 300;
+global.maxDayTime = 55; // 300
 
 // easy, mid, hard room value settings
     // timing in seconds

@@ -1,5 +1,6 @@
 // oTripManager.
-difficulty = "easy";
+// no time to standardise difficulty and use SLAP
+// single level of abstraction
 noOfBags = 5;
 timerPosX = 520; // pixels
 timerPosY = 145; // pixels
@@ -13,10 +14,10 @@ global.tripManager = id;
   */
 function Init(diff, numBags)
 {
-    difficulty = diff;
+    global.difficulty = diff;
     noOfBags = numBags;
 
-    switch (difficulty)
+    switch (global.difficulty)
     {
         case "easy":
             timerObj = instance_create_layer(timerPosX, timerPosY, "UI", oTimerEasy);
@@ -36,7 +37,7 @@ function OnTripEnd()
 
     // set daytime to what it will be after the trip ends
 	global.tripTimeLeft = global.activeTimer.displayedTime;
-	global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(difficulty) + global.tripTimeLeft;
+	global.dayTimeLeft = global.dayTimeLeft - GetLevelMaxTime(global.difficulty) + global.tripTimeLeft;
 	
     // count for EOT screen
     // count the number of bags
@@ -48,11 +49,11 @@ function OnTripEnd()
     global.caught = global.StealChance(global.tripBagsTaken);
 
     // for displayer and calc
-    global.tripBase = GetBase(difficulty);
+    global.tripBase = GetBase(global.difficulty);
 
     // money calculation
 
-    global.timeBonus = CalcMoneyFrmRemainingTime(global.tripTimeLeft, difficulty);
+    global.timeBonus = CalcMoneyFrmRemainingTime(global.tripTimeLeft, global.difficulty);
     global.unsortedPenalty = global.tripBagsIncomplete * global.incompleteFeePerBag;
 
     // from stealing
@@ -65,19 +66,42 @@ function OnTripEnd()
     global.dayTotalAmt += global.tripTotalAmt;
     global.cash += global.tripTotalAmt; // to show dist to goal in endTrip
 
-    // day vars for debug monitoring
-    // global.easyCompleted++; edit by difficulty
-    // bonus from this difficulty += timeBonus
+    // update day statistics
+    UpdateDayBonus(global.timeBonus);
 
     global.bagsCaughtStealing += (global.fine != 0) ? global.tripBagsTaken : 0;
     global.dayIncompleteBags += global.tripBagsIncomplete;
+    global.aliensServed++;
+    global.dayTotalBaseAmt += global.tripBase;
+    global.dayTotalTimeBonusAmt += global.timeBonus;
+    global.dayTotalStealAmt += global.profit;
+    global.dayTotalFines += global.fine;
 
-    if (global.isLastTripOfDay) // TODO: trigger by alien
+    if (global.isLastTripOfDay) // triggered by packing scene's timer
     {
-        OnDayEnd(); // in external script
+        OnDayEnd(); // in script
     }
 	
     room_goto(EndTripScene);
+}
+
+function UpdateDayBonus(bonus)
+{
+    switch (global.difficulty)
+    {
+        case "easy":
+            global.bonusFromEasy += bonus;
+            global.easyCompleted++;
+            break;
+        case "mid":
+            global.bonusFromMid += bonus;
+            global.midCompleted++;
+            break;
+        case "hard":
+            global.bonusFromHard += bonus;
+            global.hardCompleted++;
+            break;
+    };
 }
 
 function GetBase(_diff)

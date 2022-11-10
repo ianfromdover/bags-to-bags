@@ -17,23 +17,23 @@ bar_height = 20;
 bar_x = x;
 bar_y = y + 50;
 
+lastTripX = 630;
+lastTripY = 20;
 
 function Init()
 {
+	if (difficultyTime > global.dayTimeLeft)
+	{
+		global.isLastTripOfDay = true;
+		instance_create_layer(lastTripX, lastTripY, "UI", oLastTrip);
+	}
+	
 	global.activeTimer = id;
 	less15Flag = false;
 	less0Flag = false;
 	timeIsRunning = true;
 	
-	if (difficultyTime > global.dayTimeLeft)
-	{
-		displayedTime = global.dayTimeLeft;
-	}
-	else
-	{
-		displayedTime = difficultyTime;
-	}
-	
+	displayedTime = difficultyTime;
 	currTime = displayedTime;
 }
 
