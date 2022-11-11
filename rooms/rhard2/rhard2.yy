@@ -32,7 +32,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C9D5CEE","properties":[],"isDnd":false,"objectId":{"name":"oBagSnake","path":"objects/oBagSnake/oBagSnake.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":512.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1544A377","properties":[],"isDnd":false,"objectId":{"name":"oBagSnake","path":"objects/oBagSnake/oBagSnake.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":640.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_59E307DB","properties":[],"isDnd":false,"objectId":{"name":"oBagT","path":"objects/oBagT/oBagT.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1120.0,"y":288.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_667E2D05","properties":[],"isDnd":false,"objectId":{"name":"oHard2ONLYLASTDAY","path":"objects/oHard2ONLYLASTDAY/oHard2ONLYLASTDAY.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":992.0,"y":96.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Slots","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_41B4B700","properties":[],"isDnd":false,"objectId":{"name":"oTrunk","path":"objects/oTrunk/oTrunk.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_41B4B700","path":"rooms/ParentTrip/ParentTrip.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":521.0,"y":251.0,},
@@ -61,7 +60,6 @@
     {"name":"inst_59E307DB","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_41B4B700","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_1B655C18","path":"rooms/rHard2/rHard2.yy",},
-    {"name":"inst_667E2D05","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_3D30EC96","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_23DF65B8","path":"rooms/rHard2/rHard2.yy",},
     {"name":"inst_1E75442","path":"rooms/rHard2/rHard2.yy",},
