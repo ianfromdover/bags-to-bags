@@ -18,9 +18,9 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Pause","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_B236FA6","properties":[],"isDnd":false,"objectId":{"name":"oPauseMenu","path":"objects/oPauseMenu/oPauseMenu.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":683.0,"y":384.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7DC50B21","properties":[],"isDnd":false,"objectId":{"name":"oBtnResume","path":"objects/oBtnResume/oBtnResume.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":683.0,"y":384.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2DB78116","properties":[],"isDnd":false,"objectId":{"name":"oTGamePaused","path":"objects/oTGamePaused/oTGamePaused.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":468.0,"y":151.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6DFF6F99","properties":[],"isDnd":false,"objectId":{"name":"oBtnResume","path":"objects/oBtnResume/oBtnResume.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":680.0,"y":515.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7DC50B21","properties":[],"isDnd":false,"objectId":{"name":"oBtnResume","path":"objects/oBtnResume/oBtnResume.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":575.5,"y":332.5,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_517A81A","properties":[],"isDnd":false,"objectId":{"name":"oBtnMainMenu","path":"objects/oBtnMainMenu/oBtnMainMenu.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":551.5,"y":489.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23503CF4","properties":[],"isDnd":false,"objectId":{"name":"oTGamePaused","path":"objects/oTGamePaused/oTGamePaused.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":490.0,"y":136.0,},
       ],"visible":false,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bags","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Slots","instances":[
@@ -51,8 +51,8 @@
     {"name":"inst_7CD1F120","path":"rooms/ParentTrip/ParentTrip.yy",},
     {"name":"inst_B236FA6","path":"rooms/ParentTrip/ParentTrip.yy",},
     {"name":"inst_7DC50B21","path":"rooms/ParentTrip/ParentTrip.yy",},
-    {"name":"inst_2DB78116","path":"rooms/ParentTrip/ParentTrip.yy",},
-    {"name":"inst_6DFF6F99","path":"rooms/ParentTrip/ParentTrip.yy",},
+    {"name":"inst_517A81A","path":"rooms/ParentTrip/ParentTrip.yy",},
+    {"name":"inst_23503CF4","path":"rooms/ParentTrip/ParentTrip.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

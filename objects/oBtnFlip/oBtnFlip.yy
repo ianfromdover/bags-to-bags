@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnFlip",
   "spriteId": {
-    "name": "sFlip",
-    "path": "sprites/sFlip/sFlip.yy",
+    "name": "sBtnFlip",
+    "path": "sprites/sBtnFlip/sBtnFlip.yy",
   },
   "solid": false,
   "visible": true,

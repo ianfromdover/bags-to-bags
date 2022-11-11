@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oBtnSubmitFlipped",
   "spriteId": {
-    "name": "sSubmitFlipped",
-    "path": "sprites/sSubmitFlipped/sSubmitFlipped.yy",
+    "name": "sBtnSubmitFlipped",
+    "path": "sprites/sBtnSubmitFlipped/sBtnSubmitFlipped.yy",
   },
   "solid": false,
   "visible": true,

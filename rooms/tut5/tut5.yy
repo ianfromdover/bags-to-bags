@@ -22,8 +22,9 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bags","instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Slots","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"UI","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6FF73BF9","properties":[],"isDnd":false,"objectId":{"name":"oBtnStartDay","path":"objects/oBtnStartDay/oBtnStartDay.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":704.0,},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6FF73BF9","properties":[],"isDnd":false,"objectId":{"name":"oBtnStartDay","path":"objects/oBtnStartDay/oBtnStartDay.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1269.0,"y":659.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3AAE1BE","properties":[],"isDnd":false,"objectId":{"name":"oBtnSkip","path":"objects/oBtnSkip/oBtnSkip.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_3AAE1BE","path":"rooms/tutParent/tutParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":1184.0,"y":32.0,},
+      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":{"name":"_5illegal_valuable_2","path":"sprites/_5illegal_valuable_2/_5illegal_valuable_2.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": true,
@@ -31,6 +32,7 @@
   "inheritCode": true,
   "instanceCreationOrder": [
     {"name":"inst_6FF73BF9","path":"rooms/tut5/tut5.yy",},
+    {"name":"inst_3AAE1BE","path":"rooms/tut5/tut5.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
