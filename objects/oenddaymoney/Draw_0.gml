@@ -12,7 +12,6 @@ msg = "CUSTOMERS SERVED:" + line
 	+ "TIME BONUS      " + string(global.dayTotalTimeBonusAmt) + line
 	+ "STEALING        " + string(global.dayTotalStealAmt) + line
 	+ "--------------------" + line
-	+ "FUEL           -" + string(global.fuelCost) + line
 	+ "FINES          -" + string(global.dayTotalFines) + line
 	+ "--------------------" + line
 	+ "TODAY'S TOTAL   " + string(global.dayTotalAmt) + line

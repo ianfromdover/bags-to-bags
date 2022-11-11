@@ -19,7 +19,7 @@ global.day = 1;           // int, [1, 2, 3]
 // -- DAY VARS --
 // --------------
 
-global.dayTimeLeft = 300; // float, secs
+global.dayTimeLeft = 150; // float, secs
 
 // cash
 global.dayTotalAmt = 0;
@@ -75,16 +75,16 @@ global.tripTotalAmt = 0;
 // -- CONSTANTS --
 // ---------------
 
-global.maxDayTime = 300;
+global.maxDayTime = 150;
 
 // easy, mid, hard room value settings
     // timing in seconds
 global.easyTime = 60;
-global.midTime = 90;
-global.hardTime = 120;
+global.midTime = 75;
+global.hardTime = 90;
 
-global.day2TimeReduction = 10;
-global.day3TimeReduction = 15;
+global.day2TimeReduction = 20;
+global.day3TimeReduction = 30;
 
 	// cash base salary
 global.easy_base = 70;
@@ -93,20 +93,19 @@ global.hard_base = 150;
 
     // cash multipliers
 global.easy_multiplier = 1;
-global.mid_multiplier = 2;
-global.hard_multiplier = 3;
+global.mid_multiplier = 1.5;
+global.hard_multiplier = 2;
 
     // other constants
-global.fuelCost = 250;
 global.incompleteFeePerBag = 30;
 global.stealRewardPerBag = 100;
 global.stealCaughtFinePerBag = 100;
 // no reward for reporting illegal goods -> just feel good about yourself
 
     // goal / milestone
-global.goal1 = 2000;
-global.goal2 = 5000;
-global.goal3 = 10000;
+global.goal1 = 700;
+global.goal2 = 2000;
+global.goal3 = 3000; // currently not used due to lack of end scenarios
 
 global.StealChance = function(numBags)
 {
