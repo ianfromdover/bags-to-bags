@@ -144,6 +144,7 @@
     {"id":{"name":"oBagTwig","path":"objects/oBagTwig/oBagTwig.yy",},"order":24,},
     {"id":{"name":"sRadio","path":"sprites/sRadio/sRadio.yy",},"order":6,},
     {"id":{"name":"Color4","path":"scripts/Color4/Color4.yy",},"order":3,},
+    {"id":{"name":"oTAboutBody","path":"objects/oTAboutBody/oTAboutBody.yy",},"order":14,},
     {"id":{"name":"endingBbOkay","path":"sprites/endingBbOkay/endingBbOkay.yy",},"order":12,},
     {"id":{"name":"tut4","path":"rooms/tut4/tut4.yy",},"order":47,},
     {"id":{"name":"oHelpImage","path":"objects/oHelpImage/oHelpImage.yy",},"order":18,},

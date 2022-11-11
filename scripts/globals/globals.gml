@@ -84,7 +84,7 @@ global.midTime = 75;
 global.hardTime = 90;
 
 global.day2TimeReduction = 20;
-global.day3TimeReduction = 30;
+global.day3TimeReduction = 35;
 
 	// cash base salary
 global.easy_base = 70;
