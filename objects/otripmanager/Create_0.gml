@@ -52,7 +52,7 @@ function OnTripEnd()
     global.tripEarned = ceil(tripBase * (noOfBagsLoaded + global.tripBagsTaken) / noOfBags);
 
     // money calculation
-    global.timeBonus = CalcMoneyFrmRemainingTime(global.tripTimeLeft, global.difficulty);
+    global.timeBonus = global.tripBagsIncomplete == 0 ? CalcMoneyFrmRemainingTime(global.tripTimeLeft, global.difficulty) : 0;
 
     // from stealing
     global.profit = !global.caught && !global.reportedIllegal ? global.tripBagsTaken * global.stealRewardPerBag : 0;

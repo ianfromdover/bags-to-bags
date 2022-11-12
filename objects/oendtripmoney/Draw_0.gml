@@ -14,6 +14,14 @@ total = (global.tripTotalAmt < 0 ? "" : "+") + string(global.tripTotalAmt);
 // -------------
 
 line = "\n";
+
+bonusZeroMsg = global.tripBagsIncomplete != 0
+	? line + "You weren't given time bonus" + line
+		+ "because you didn't finish" + line
+	    + "sorting all the items." + line
+        + line
+	: "";
+
 reportIllegMsg = global.reportedIllegal // didn't manage to implement, not enough illegal item art
 	? line + "You reported an illegal item! The space police " + line
 	    + "thanks you for taking a stand against trafficking." + line
@@ -33,29 +41,12 @@ caughtMsg = stole && global.caught && !global.reportedIllegal
 	    + "FINE       -" + string(global.fine) + line
 	: "";
 
-/*
-
-EARNED: earned from placing bags.
-UNSORTED
----------------
-TIME LEFT
-MULTIPLIER
-TIME BONUS
----------------
-BAGS TAKEN
-
-dialogue
----------------
-TOTAL
-NEXT GOAL
-
-*/
-
 msg = "EARNED     +" + string(global.tripEarned) + line
 	+ "UNSORTED    " + string(global.tripBagsIncomplete) + line
 	+ "--------------" + line
 	+ "TIME LEFT   " + string(global.tripTimeLeft) + line
 	+ "MULTIPLIER  " + string(global.tripMultiplier) + line
+	+ bonusZeroMsg
 	+ "TIME BONUS +" + string(global.timeBonus) + line
 	+ "--------------" + line
 	+ "BAGS TAKEN  " + string(global.tripBagsTaken) + line
