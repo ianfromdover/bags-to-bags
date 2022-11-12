@@ -6,10 +6,10 @@ line = "\n";
 msg = "It's the final day, I can't wait to meet her tomorrow." + line
 	+ line
 	+ "Hmm, seems like the passengers are in a bit of a rush" + line
-	+ "today. Maybe because the weekend is coming." + line
+	+ "today. They're demanding 15s less for each trip" + line
+	+ "as compared to yesterday." + line
 	+ line
-	+ "Also, I heard that Mars has the best views." + line
-	+ "But it's kind of far, I hope I have enough to" + line
-	+ "buy fuel to get there if we can.";
+	+ "Also, Mars is kind of far and it costs a lot to get there." + line
+	+ "But I heard that it has the best views. Especially at the Mars Bar.";
 
 draw_text(x, y, msg);

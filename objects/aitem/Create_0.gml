@@ -66,6 +66,8 @@ function OnDragStart(cursor_x, cursor_y)
     UndockSlots();
     isBeingDragged = true;
     global.itemBeingDragged = id;
+    // set the previous selected item to img idx 0
+    // image_index = 1;
 	audio_play_sound(Rotate, 10, 0);
 
     // save cursor offset

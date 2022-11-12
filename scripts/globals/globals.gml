@@ -79,16 +79,16 @@ global.maxDayTime = 150;
 // easy, mid, hard room value settings
     // timing in seconds
 global.easyTime = 60;
-global.midTime = 75;
-global.hardTime = 90;
+global.midTime = 70;
+global.hardTime = 80;
 
 global.day2TimeReduction = 20;
 global.day3TimeReduction = 35;
 
 	// cash base salary
-global.easy_base = 70;
+global.easy_base = 80;
 global.mid_base = 100;
-global.hard_base = 150;
+global.hard_base = 120;
 
     // cash multipliers
 global.easy_multiplier = 1;
