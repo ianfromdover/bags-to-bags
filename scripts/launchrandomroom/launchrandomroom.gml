@@ -4,7 +4,7 @@ function LaunchRandomRoom(_difficulty)
 	{
 		case "easy":
 			// random from room easys
-			rm_no = irandom_range(1, 6); // 6 easy rooms, inclusive int rand
+			rm_no = irandom_range(1, 10); // 10 easy rooms, inclusive int rand
 			switch(rm_no)
 			{
 				case 1:
@@ -25,11 +25,23 @@ function LaunchRandomRoom(_difficulty)
 				case 6:
 					room_goto(rEasy6);
 					break;
+				case 7:
+					room_goto(rEasy7);
+					break;
+				case 8:
+					room_goto(rEasy8);
+					break;
+				case 9:
+					room_goto(rEasy9);
+					break;
+				case 10:
+					room_goto(rEasy10);
+					break;
 			}
 			break;
 			
 		case "mid":
-			rm_no = irandom_range(1, 12);
+			rm_no = irandom_range(1, 16);
 			switch(rm_no)
 			{
 				case 1:
@@ -68,11 +80,23 @@ function LaunchRandomRoom(_difficulty)
 				case 12:
 					room_goto(rMid7V);
 					break;
+				case 13:
+					room_goto(rMid10);
+					break;
+				case 14:
+					room_goto(rMid11);
+					break;
+				case 15:
+					room_goto(rMid12);
+					break;
+				case 16:
+					room_goto(rMid13);
+					break;
 			}
 			break;
 
 		case "hard":
-			rm_no = irandom_range(1, 10);
+			rm_no = irandom_range(1, 14);
 			switch(rm_no)
 			{
 				case 1:
@@ -104,6 +128,18 @@ function LaunchRandomRoom(_difficulty)
 					break;
 				case 10:
 					room_goto(rHard7V);
+					break;
+				case 11:
+					room_goto(rHard8);
+					break;
+				case 12:
+					room_goto(rHard9);
+					break;
+				case 13:
+					room_goto(rHard10);
+					break;
+				case 14:
+					room_goto(rHard11);
 					break;
 			}
 			break;
