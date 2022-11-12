@@ -56,7 +56,7 @@ global.itemBeingDragged = noone;
 // --------------------
 
 // for endtripmoney
-global.tripBase = 70; // will be overwritten by tripmanager
+global.tripEarned = 70; // will be overwritten by tripmanager
 global.tripMultiplier = 1;
 global.tripTimeLeft = 0;
 global.timeBonus = 0;
@@ -68,7 +68,6 @@ global.reportedIllegal = false;
 global.caught = false; 
 global.profit = 0;
 global.fine = 0;
-global.unsortedPenalty = 0;
 global.tripTotalAmt = 0; 
 
 // ---------------
@@ -97,7 +96,6 @@ global.mid_multiplier = 1.5;
 global.hard_multiplier = 2;
 
     // other constants
-global.incompleteFeePerBag = 30;
 global.stealRewardPerBag = 100;
 global.stealCaughtFinePerBag = 100;
 // no reward for reporting illegal goods -> just feel good about yourself
