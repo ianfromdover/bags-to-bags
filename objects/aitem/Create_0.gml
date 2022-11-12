@@ -21,6 +21,7 @@ allAvail = false;
 isBeingDragged = false;
 cursorOffsetX = 0;
 cursorOffsetY = 0;
+image_speed = 0; // stop the sprites from spasming
 
 // -------------------
 // ----- methods -----
