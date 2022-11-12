@@ -183,25 +183,6 @@ function OnDragEnd()
         y = slot_y;
 		audio_play_sound(DropBag, 10, 0);
     }
-    else 
-    {
-        /*
-           Stretch goal: snap back to prev pos on release when released over
-           another piece or invalid grid pos, but not when released outside grid.
-
-           2 player intents here.
-           1. they wanna let go on open space and let it stay there
-           2. they wanna let go on invalid gridSpace and make it snap back to orig
-         */
-
-        /*
-           if (prevPxPosOfOrigin == noone) return; // item has never docked before
-
-        // move item back to prev position
-        x = prevPxPosOfOrigin.x;
-        y = prevPxPosOfOrigin.y;
-         */
-    }
 }
 
 function Dock(parentGrid, curr_coords)

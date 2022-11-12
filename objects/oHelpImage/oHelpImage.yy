@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oHelpImage",
-  "spriteId": {
-    "name": "sHelpImage",
-    "path": "sprites/sHelpImage/sHelpImage.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
