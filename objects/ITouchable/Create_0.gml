@@ -1,0 +1,1 @@
+OnTouch = function (touch_id, touch_x, touch_y) {} // abstract, implement by overriding in children

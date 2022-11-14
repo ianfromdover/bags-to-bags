@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Controls",
-    "path": "folders/Objects/UI/Game Controls.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
 }

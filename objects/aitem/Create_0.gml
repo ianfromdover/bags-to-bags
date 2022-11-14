@@ -1,6 +1,25 @@
 /// @description aItem, an abstract item
 // add unique item properties using the Room Start event instead.
 
+// ---------------------------------------------
+// ----- ITouchable multi-touch detection  -----
+// ---------------------------------------------
+
+event_inherited();
+
+finger_touch_x = 0;
+finger_touch_y = 0;
+finger_touch_id = -1;
+touch_start = true; // flags to simulate Drag Start and Drag End events
+// touch_end = true;
+
+OnTouch = function(touch_id, touch_x, touch_y)
+{
+	finger_touch_id = touch_id;
+	finger_touch_x = touch_x;
+	finger_touch_y = touch_y;
+}
+
 // -----------------------
 // ----- attributes  -----
 // -----------------------
