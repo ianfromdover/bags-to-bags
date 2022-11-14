@@ -17,9 +17,6 @@ A Cross-platform 2D Puzzle Game made in GameMaker as a submission for the NM4260
 - Charmaine Chong
 - Ian Hong
 
-# Installation
-- Download the latest release from the [Releases](https://github.com/ianfromdover/bags-to-bags/releases) page. Once the Beta version is ready, a Mac and Windows installer will be made available.
-
 # Credits
 Image Credits: 
 - [Game Logo Template](https://assetstore.unity.com/packages/2d/gui/icons/20-logo-templates-with-customizable-psd-vector-sources-174999) by Pirate Parrot on Unity Asset Store 
