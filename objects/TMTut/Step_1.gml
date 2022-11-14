@@ -4,8 +4,8 @@ var max_fingers = 4; // number of fingers
 for (var finger = 0; finger < max_fingers; finger++)
 {
 	// get coords
-    var touch_x = device_mouse_x_to_gui(finger);
-    var touch_y = device_mouse_y_to_gui(finger);
+    var touch_x = device_mouse_x(finger);
+    var touch_y = device_mouse_y(finger);
 	var is_touched = device_mouse_check_button(finger, mb_left);
         
 	// even if there isn't an item at pos, make the existing item follow
