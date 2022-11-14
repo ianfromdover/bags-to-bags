@@ -16,6 +16,6 @@ for (var finger = 0; finger < max_fingers; finger++)
 	// if an object is held, run the object's method OnHold
     if (has_touchable_at_pos != noone && is_touched)
     {
-		has_touchable_at_pos.OnTouch(finger, touch_x, touch_y);
+		has_touchable_at_pos.OnTouch(finger, touch_x, touch_y); // nextdebug
     }
 }
