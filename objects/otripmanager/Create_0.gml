@@ -34,6 +34,7 @@ function Init(diff, numBags)
 function OnTripEnd()
 {
 	global.activeTimer.StopTimer();
+	global.itemBeingDragged = noone;
 
     // minus time taken during trip from daytime
 	global.tripTimeLeft = global.activeTimer.displayedTime;

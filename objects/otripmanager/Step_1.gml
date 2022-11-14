@@ -8,7 +8,7 @@ for (var finger = 0; finger < max_fingers; finger++)
     var touch_y = device_mouse_y_to_gui(finger);
 	var is_touched = device_mouse_check_button(finger, mb_left);
         
-	// even if there isn't an item at pos, still run follow.
+	// even if there isn't an item at pos, make the existing item follow
 	if (global.itemBeingDragged != noone && is_touched)
 	{
 		global.itemBeingDragged.Follow(touch_x, touch_y);
@@ -22,7 +22,6 @@ for (var finger = 0; finger < max_fingers; finger++)
     {
 		has_touchable_at_pos.OnTouch(finger, touch_x, touch_y);
     }
-	
 	
 }
 
