@@ -1,3 +1,3 @@
-/// @description Overwrite fn in child
+// overwritten functions
 fn = noone;
 this = new UiButton(fn);

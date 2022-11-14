@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "aUIButton",
-    "path": "objects/aUIButton/aUIButton.yy",
+    "name": "aTouchableUIButton",
+    "path": "objects/aTouchableUIButton/aTouchableUIButton.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

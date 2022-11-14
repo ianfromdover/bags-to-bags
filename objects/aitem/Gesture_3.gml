@@ -1,2 +1,2 @@
 /// @description Follow
-Follow(event_data[?"posX"], event_data[?"posY"]);
+// Follow(event_data[?"posX"], event_data[?"posY"]);
