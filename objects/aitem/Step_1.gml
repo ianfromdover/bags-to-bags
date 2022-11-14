@@ -8,7 +8,6 @@ if (finger_touch_id != -1)
 		{
 			OnDragStart(finger_touch_x, finger_touch_y);
 			touch_start = false;
-			// touch_end = true;
 		}
 		else
 		{
@@ -17,13 +16,6 @@ if (finger_touch_id != -1)
     }
     else
     {
-		/* currently well handled by global drag end on tripmanager.
-		if (touch_end)
-		{
-			OnDragEnd();
-			touch_end = false;
-		}
-		*/
         finger_touch_id = -1;
         finger_touch_x = 0;
         finger_touch_y = 0;
@@ -31,4 +23,5 @@ if (finger_touch_id != -1)
 		touch_start = true;
     }
 }
+
 // if this works, del left pressed, step, drag start and dragging events

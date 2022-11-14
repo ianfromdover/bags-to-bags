@@ -10,8 +10,7 @@ event_inherited();
 finger_touch_x = 0;
 finger_touch_y = 0;
 finger_touch_id = -1;
-touch_start = true; // flags to simulate Drag Start and Drag End events
-// touch_end = true;
+touch_start = true; // flag to simulate Drag Start
 
 OnTouch = function(touch_id, touch_x, touch_y)
 {
